@@ -995,7 +995,7 @@
     ],
     "contentFocus": "세교지구 택지개발과 대학을 끼고 성장하는 경기 남부 소도시입니다.",
     "indexPriority": 2,
-    "contentStatus": "draft"
+    "contentStatus": "ready"
   },
   {
     "regionName": "의정부시",
@@ -1040,7 +1040,7 @@
     ],
     "contentFocus": "백운호수와 철도연구단지를 끼고 안양과 인접한 경기 남부 소도시입니다.",
     "indexPriority": 2,
-    "contentStatus": "draft"
+    "contentStatus": "ready"
   },
   {
     "regionName": "과천시",
@@ -1063,7 +1063,7 @@
     ],
     "contentFocus": "정부청사와 대공원을 품은 관악산 자락의 경기 북부 쾌적한 행정 도시입니다.",
     "indexPriority": 2,
-    "contentStatus": "draft"
+    "contentStatus": "ready"
   },
   {
     "regionName": "이천시",
