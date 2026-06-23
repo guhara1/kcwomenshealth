@@ -602,7 +602,7 @@ ol {
   color: var(--text-soft);
   font-size: var(--fs-md);
 }
-.prose a {
+.prose a:not(.btn):not(.chip):not(.area-row) {
   color: var(--accent-strong);
   font-weight: 600;
   text-decoration: underline;
@@ -1258,7 +1258,8 @@ body {
   line-height: 1.85;
   color: var(--c-slate-700);
 }
-.prose a {
+/* 본문 인라인 링크에만 밑줄 효과 (버튼·칩·행 링크 제외) */
+.prose a:not(.btn):not(.chip):not(.area-row) {
   color: var(--accent-strong);
   font-weight: 600;
   text-decoration: none;
@@ -1268,9 +1269,16 @@ body {
   background-repeat: no-repeat;
   transition: background-size var(--dur) var(--ease), color var(--dur) var(--ease);
 }
-.prose a:hover {
+.prose a:not(.btn):not(.chip):not(.area-row):hover {
   color: var(--c-blue-600);
   background-size: 100% 2px;
+}
+/* 버튼/칩은 본문 안에서도 고유 스타일 유지(밑줄·취소선 효과 제거) */
+.prose a.btn,
+.prose a.chip,
+.prose a.area-row {
+  background-image: none;
+  text-decoration: none;
 }
 .prose ul {
   padding-left: 0;
