@@ -1085,7 +1085,7 @@
     ],
     "contentFocus": "쌀과 도자기, 반도체 공장을 품은 경기 동남부 산업·농업 도시입니다.",
     "indexPriority": 2,
-    "contentStatus": "draft"
+    "contentStatus": "ready"
   },
   {
     "regionName": "안성시",
@@ -1107,7 +1107,7 @@
     ],
     "contentFocus": "남사당놀이와 물류단지를 품은 경기 최남단 농업·산업 도시입니다.",
     "indexPriority": 2,
-    "contentStatus": "draft"
+    "contentStatus": "ready"
   },
   {
     "regionName": "양주시",
@@ -1152,7 +1152,7 @@
     ],
     "contentFocus": "산정호수와 허브아일랜드 등 관광·군부대가 어우러진 경기 북부 도시입니다.",
     "indexPriority": 2,
-    "contentStatus": "draft"
+    "contentStatus": "ready"
   },
   {
     "regionName": "여주시",
@@ -1173,7 +1173,7 @@
     ],
     "contentFocus": "남한강과 세종대왕릉, 아울렛을 품은 경기 동부 끝 관광·농업 도시입니다.",
     "indexPriority": 2,
-    "contentStatus": "draft"
+    "contentStatus": "ready"
   },
   {
     "regionName": "양평군",
@@ -1219,7 +1219,7 @@
     ],
     "contentFocus": "남이섬과 자라섬 등 북한강 관광지가 밀집한 경기 동북부 자연 군 지역입니다.",
     "indexPriority": 2,
-    "contentStatus": "draft"
+    "contentStatus": "ready"
   },
   {
     "regionName": "연천군",
@@ -1241,7 +1241,7 @@
     ],
     "contentFocus": "한탄강과 선사유적을 품은 경기 최북단 접경 농촌 군 지역입니다.",
     "indexPriority": 2,
-    "contentStatus": "draft"
+    "contentStatus": "ready"
   },
   {
     "regionName": "동두천시",
