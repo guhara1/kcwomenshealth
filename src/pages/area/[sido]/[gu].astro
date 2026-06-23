@@ -11,6 +11,7 @@ import {
   stations,
   stationsInSigungu,
   dongsOf,
+  hasDongDetail,
   isIndexable,
 } from "../../../lib/data";
 import {
@@ -174,15 +175,22 @@ const schema = noindex
       </div>
       <div class="area-rows">
         {
-          areaList.map((d) => (
-            <div class="area-row" id={d.slug ? `dong-${d.slug}` : undefined}>
-              <b>{d.name}</b>
-              <span>
-                {d.blurb ||
-                  `${g.regionName} ${d.name} 일대 주거지와 상권을 포함한 생활권입니다. 방문 가능 주소와 건물 출입 가능 여부를 먼저 확인하세요.`}
-              </span>
-            </div>
-          ))
+          areaList.map((d) => {
+            const href =
+              d.slug && hasDongDetail(g.regionSlug, d.slug)
+                ? `/area/${g.parentSlug}/${g.regionSlug}/${d.slug}/`
+                : null;
+            const Tag = href ? "a" : "div";
+            return (
+              <Tag class="area-row" href={href} id={d.slug ? `dong-${d.slug}` : undefined}>
+                <b>{d.name} {href && <span class="arrow">→</span>}</b>
+                <span>
+                  {d.blurb ||
+                    `${g.regionName} ${d.name} 일대 주거지와 상권을 포함한 생활권입니다. 방문 가능 주소와 건물 출입 가능 여부를 먼저 확인하세요.`}
+                </span>
+              </Tag>
+            );
+          })
         }
       </div>
     </div>

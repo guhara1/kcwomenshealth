@@ -60,6 +60,36 @@ export interface Dong {
   blurb: string;
 }
 
+export interface DongDetail {
+  nearbyStations: string[];
+  adjacentAreas: string[];
+  landmarks: string[];
+  character: string;
+  p1: string;
+  p2: string;
+  p3: string;
+}
+
+// dong-detail/{gu}.json 들을 자동 로드 (콘텐츠가 준비된 동만 색인 → 도어웨이 방지)
+const detailModules = import.meta.glob<{ default: Record<string, DongDetail> }>(
+  "../data/dong-detail/*.json",
+  { eager: true }
+);
+const dongDetails: Record<string, Record<string, DongDetail>> = {};
+for (const [filePath, mod] of Object.entries(detailModules)) {
+  const gu = filePath.split("/").pop()!.replace(".json", "");
+  dongDetails[gu] = (mod as any).default ?? (mod as any);
+}
+
+/** 특정 구·동의 상세 콘텐츠 (없으면 undefined → 페이지 미생성) */
+export const dongDetailFor = (
+  guSlug: string,
+  dongSlug: string
+): DongDetail | undefined => dongDetails[guSlug]?.[dongSlug];
+
+export const hasDongDetail = (guSlug: string, dongSlug: string): boolean =>
+  Boolean(dongDetails[guSlug]?.[dongSlug]);
+
 export const sidos = sidoData as Sido[];
 export const sigungus = sigunguData as Sigungu[];
 export const stations = stationData as Station[];
@@ -73,6 +103,30 @@ export const dongsOf = (guSlug: string): Dong[] => {
     return [...list].sort((a, b) => a.name.localeCompare(b.name, "ko"));
   }
   return [];
+};
+
+export interface DetailDongEntry {
+  sidoSlug: string;
+  guSlug: string;
+  dong: Dong;
+  detail: DongDetail;
+}
+
+/** 상세 콘텐츠가 준비된 행정동 전체 (개별 페이지 생성용) */
+export const allDetailDongs = (): DetailDongEntry[] => {
+  const out: DetailDongEntry[] = [];
+  for (const [guSlug, map] of Object.entries(dongDetails)) {
+    const gu = sigungus.find((s) => s.regionSlug === guSlug);
+    const sidoSlug = gu?.parentSlug ?? "seoul";
+    const guDongs = dongsOf(guSlug);
+    for (const [dongSlug, detail] of Object.entries(map)) {
+      const dong =
+        guDongs.find((d) => d.slug === dongSlug) ??
+        ({ name: dongSlug, slug: dongSlug, blurb: "" } as Dong);
+      out.push({ sidoSlug, guSlug, dong, detail });
+    }
+  }
+  return out;
 };
 
 /** contentStatus 가 색인 가능한 상태인지 */
