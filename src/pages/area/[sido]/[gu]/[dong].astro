@@ -183,6 +183,12 @@ const schema = [
 
       <h2>{dong.name} 예약 전 확인사항</h2>
       <p>{detail.p3}</p>
+      <p>
+        {dong.name} 방문 예약은 전화 {SITE.phone} 또는 텔레그램으로 받으며,
+        {sts[0]} 기준 방문 동선과 {adj[0]} 인접 지역 이동 여부를 함께 확인하면
+        예약이 빠릅니다. {gu.regionName} {dong.name}은 {detail.character} 특성을
+        고려해 방문 가능 시간과 추가 이동비 기준을 예약 시 안내합니다.
+      </p>
       <ul>
         <li>방문 가능 주소 확인 (자택·호텔·오피스텔 동·호수)</li>
         <li>건물 출입 방식(공동현관·프런트) 확인</li>

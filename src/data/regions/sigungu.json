@@ -5,8 +5,19 @@
     "parentSlug": "seoul",
     "sido": "서울",
     "regionType": "gu",
-    "nearbyStations": ["강남역", "역삼역", "선릉역", "삼성역"],
-    "nearbyAreas": ["역삼동", "논현동", "삼성동", "대치동", "청담동"],
+    "nearbyStations": [
+      "강남역",
+      "역삼역",
+      "선릉역",
+      "삼성역"
+    ],
+    "nearbyAreas": [
+      "역삼동",
+      "논현동",
+      "삼성동",
+      "대치동",
+      "청담동"
+    ],
     "contentFocus": "테헤란로를 중심으로 오피스와 상업시설이 밀집한 서울 대표 업무·번화가 지역입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -17,8 +28,19 @@
     "parentSlug": "seoul",
     "sido": "서울",
     "regionType": "gu",
-    "nearbyStations": ["잠실역", "석촌역", "가락시장역", "문정역"],
-    "nearbyAreas": ["잠실동", "석촌동", "방이동", "가락동", "문정동"],
+    "nearbyStations": [
+      "잠실역",
+      "석촌역",
+      "가락시장역",
+      "문정역"
+    ],
+    "nearbyAreas": [
+      "잠실동",
+      "석촌동",
+      "방이동",
+      "가락동",
+      "문정동"
+    ],
     "contentFocus": "잠실 일대 대형 상업시설과 아파트 단지가 어우러진 동남권 생활 중심지입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -29,8 +51,19 @@
     "parentSlug": "seoul",
     "sido": "서울",
     "regionType": "gu",
-    "nearbyStations": ["홍대입구역", "합정역", "공덕역", "마포역"],
-    "nearbyAreas": ["서교동", "합정동", "공덕동", "상암동", "망원동"],
+    "nearbyStations": [
+      "홍대입구역",
+      "합정역",
+      "공덕역",
+      "마포역"
+    ],
+    "nearbyAreas": [
+      "서교동",
+      "합정동",
+      "공덕동",
+      "상암동",
+      "망원동"
+    ],
     "contentFocus": "홍대와 상암 미디어단지를 끼고 젊은 문화와 상권이 발달한 한강변 지역입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -41,8 +74,19 @@
     "parentSlug": "seoul",
     "sido": "서울",
     "regionType": "gu",
-    "nearbyStations": ["영등포역", "여의도역", "당산역", "문래역"],
-    "nearbyAreas": ["여의도동", "당산동", "문래동", "영등포동", "양평동"],
+    "nearbyStations": [
+      "영등포역",
+      "여의도역",
+      "당산역",
+      "문래역"
+    ],
+    "nearbyAreas": [
+      "여의도동",
+      "당산동",
+      "문래동",
+      "영등포동",
+      "양평동"
+    ],
     "contentFocus": "여의도 금융가와 영등포 전통상권이 공존하는 서남권 교통·경제 거점입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -53,8 +97,19 @@
     "parentSlug": "seoul",
     "sido": "서울",
     "regionType": "gu",
-    "nearbyStations": ["고속터미널역", "교대역", "서초역", "양재역"],
-    "nearbyAreas": ["서초동", "반포동", "방배동", "잠원동", "양재동"],
+    "nearbyStations": [
+      "고속터미널역",
+      "교대역",
+      "서초역",
+      "양재역"
+    ],
+    "nearbyAreas": [
+      "서초동",
+      "반포동",
+      "방배동",
+      "잠원동",
+      "양재동"
+    ],
     "contentFocus": "법조타운과 고급 주거지가 어우러진 강남권 행정·주거 중심 지역입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -65,8 +120,19 @@
     "parentSlug": "seoul",
     "sido": "서울",
     "regionType": "gu",
-    "nearbyStations": ["마곡나루역", "발산역", "까치산역", "화곡역"],
-    "nearbyAreas": ["화곡동", "마곡동", "등촌동", "염창동", "방화동"],
+    "nearbyStations": [
+      "마곡나루역",
+      "발산역",
+      "까치산역",
+      "화곡역"
+    ],
+    "nearbyAreas": [
+      "화곡동",
+      "마곡동",
+      "등촌동",
+      "염창동",
+      "방화동"
+    ],
     "contentFocus": "김포공항과 마곡 첨단산업단지를 품은 서울 서쪽 끝 생활·업무 지역입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -77,8 +143,19 @@
     "parentSlug": "seoul",
     "sido": "서울",
     "regionType": "gu",
-    "nearbyStations": ["구로역", "신도림역", "대림역", "구로디지털단지역"],
-    "nearbyAreas": ["구로동", "신도림동", "개봉동", "고척동", "오류동"],
+    "nearbyStations": [
+      "구로역",
+      "신도림역",
+      "대림역",
+      "구로디지털단지역"
+    ],
+    "nearbyAreas": [
+      "구로동",
+      "신도림동",
+      "개봉동",
+      "고척동",
+      "오류동"
+    ],
     "contentFocus": "구로디지털단지와 신도림 환승 상권을 중심으로 발달한 서남권 산업 지역입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -89,8 +166,16 @@
     "parentSlug": "seoul",
     "sido": "서울",
     "regionType": "gu",
-    "nearbyStations": ["가산디지털단지역", "독산역", "금천구청역"],
-    "nearbyAreas": ["가산동", "독산동", "시흥동"],
+    "nearbyStations": [
+      "가산디지털단지역",
+      "독산역",
+      "금천구청역"
+    ],
+    "nearbyAreas": [
+      "가산동",
+      "독산동",
+      "시흥동"
+    ],
     "contentFocus": "가산디지털단지 IT기업과 아울렛 상권이 밀집한 서울 남서부 산업 지역입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -101,8 +186,18 @@
     "parentSlug": "seoul",
     "sido": "서울",
     "regionType": "gu",
-    "nearbyStations": ["서울대입구역", "낙성대역", "봉천역", "신림역"],
-    "nearbyAreas": ["봉천동", "신림동", "남현동", "서원동"],
+    "nearbyStations": [
+      "서울대입구역",
+      "낙성대역",
+      "봉천역",
+      "신림역"
+    ],
+    "nearbyAreas": [
+      "봉천동",
+      "신림동",
+      "남현동",
+      "서원동"
+    ],
     "contentFocus": "서울대와 관악산을 끼고 청년·1인 가구가 많은 남부권 주거 밀집 지역입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -113,8 +208,19 @@
     "parentSlug": "seoul",
     "sido": "서울",
     "regionType": "gu",
-    "nearbyStations": ["노량진역", "사당역", "이수역", "상도역"],
-    "nearbyAreas": ["노량진동", "사당동", "상도동", "흑석동", "대방동"],
+    "nearbyStations": [
+      "노량진역",
+      "사당역",
+      "이수역",
+      "상도역"
+    ],
+    "nearbyAreas": [
+      "노량진동",
+      "사당동",
+      "상도동",
+      "흑석동",
+      "대방동"
+    ],
     "contentFocus": "노량진 학원가와 사당 환승 상권을 중심으로 한 한강 이남 주거 지역입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -125,8 +231,19 @@
     "parentSlug": "seoul",
     "sido": "서울",
     "regionType": "gu",
-    "nearbyStations": ["건대입구역", "구의역", "강변역", "군자역"],
-    "nearbyAreas": ["화양동", "구의동", "자양동", "광장동", "중곡동"],
+    "nearbyStations": [
+      "건대입구역",
+      "구의역",
+      "강변역",
+      "군자역"
+    ],
+    "nearbyAreas": [
+      "화양동",
+      "구의동",
+      "자양동",
+      "광장동",
+      "중곡동"
+    ],
     "contentFocus": "건대입구 상권과 한강·어린이대공원을 끼고 활기찬 동북권 생활 지역입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -137,8 +254,19 @@
     "parentSlug": "seoul",
     "sido": "서울",
     "regionType": "gu",
-    "nearbyStations": ["왕십리역", "성수역", "뚝섬역", "한양대역"],
-    "nearbyAreas": ["성수동", "왕십리동", "행당동", "옥수동", "금호동"],
+    "nearbyStations": [
+      "왕십리역",
+      "성수역",
+      "뚝섬역",
+      "한양대역"
+    ],
+    "nearbyAreas": [
+      "성수동",
+      "왕십리동",
+      "행당동",
+      "옥수동",
+      "금호동"
+    ],
     "contentFocus": "성수동 카페거리와 왕십리 환승 거점이 어우러진 한강변 재생 지역입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -149,11 +277,22 @@
     "parentSlug": "seoul",
     "sido": "서울",
     "regionType": "gu",
-    "nearbyStations": ["천호역", "강동역", "암사역", "고덕역"],
-    "nearbyAreas": ["천호동", "성내동", "길동", "암사동", "고덕동"],
+    "nearbyStations": [
+      "천호역",
+      "강동역",
+      "암사역",
+      "고덕역"
+    ],
+    "nearbyAreas": [
+      "천호동",
+      "성내동",
+      "길동",
+      "암사동",
+      "고덕동"
+    ],
     "contentFocus": "천호 상권과 고덕 신축 아파트 단지가 어우러진 서울 동쪽 끝 주거 지역입니다.",
     "indexPriority": 2,
-    "contentStatus": "draft"
+    "contentStatus": "ready"
   },
   {
     "regionName": "강북구",
@@ -161,11 +300,20 @@
     "parentSlug": "seoul",
     "sido": "서울",
     "regionType": "gu",
-    "nearbyStations": ["수유역", "미아역", "미아사거리역"],
-    "nearbyAreas": ["수유동", "미아동", "번동", "우이동"],
+    "nearbyStations": [
+      "수유역",
+      "미아역",
+      "미아사거리역"
+    ],
+    "nearbyAreas": [
+      "수유동",
+      "미아동",
+      "번동",
+      "우이동"
+    ],
     "contentFocus": "북한산을 배경으로 수유·미아 상권이 형성된 동북권 전통 주거 지역입니다.",
     "indexPriority": 2,
-    "contentStatus": "draft"
+    "contentStatus": "ready"
   },
   {
     "regionName": "노원구",
@@ -173,11 +321,22 @@
     "parentSlug": "seoul",
     "sido": "서울",
     "regionType": "gu",
-    "nearbyStations": ["노원역", "상계역", "중계역", "하계역"],
-    "nearbyAreas": ["상계동", "중계동", "하계동", "공릉동", "월계동"],
+    "nearbyStations": [
+      "노원역",
+      "상계역",
+      "중계역",
+      "하계역"
+    ],
+    "nearbyAreas": [
+      "상계동",
+      "중계동",
+      "하계동",
+      "공릉동",
+      "월계동"
+    ],
     "contentFocus": "상계 대단지 아파트와 중계 학원가가 발달한 동북권 대표 주거 지역입니다.",
     "indexPriority": 2,
-    "contentStatus": "draft"
+    "contentStatus": "ready"
   },
   {
     "regionName": "도봉구",
@@ -185,11 +344,21 @@
     "parentSlug": "seoul",
     "sido": "서울",
     "regionType": "gu",
-    "nearbyStations": ["창동역", "쌍문역", "도봉산역", "방학역"],
-    "nearbyAreas": ["창동", "쌍문동", "방학동", "도봉동"],
+    "nearbyStations": [
+      "창동역",
+      "쌍문역",
+      "도봉산역",
+      "방학역"
+    ],
+    "nearbyAreas": [
+      "창동",
+      "쌍문동",
+      "방학동",
+      "도봉동"
+    ],
     "contentFocus": "도봉산과 창동 역세권 개발이 진행되는 서울 최북단 주거 지역입니다.",
     "indexPriority": 2,
-    "contentStatus": "draft"
+    "contentStatus": "ready"
   },
   {
     "regionName": "동대문구",
@@ -197,11 +366,22 @@
     "parentSlug": "seoul",
     "sido": "서울",
     "regionType": "gu",
-    "nearbyStations": ["청량리역", "회기역", "장한평역", "신설동역"],
-    "nearbyAreas": ["전농동", "휘경동", "이문동", "장안동", "답십리동"],
+    "nearbyStations": [
+      "청량리역",
+      "회기역",
+      "장한평역",
+      "신설동역"
+    ],
+    "nearbyAreas": [
+      "전농동",
+      "휘경동",
+      "이문동",
+      "장안동",
+      "답십리동"
+    ],
     "contentFocus": "청량리 환승 거점과 대학가가 어우러진 동북권 교통·상업 지역입니다.",
     "indexPriority": 2,
-    "contentStatus": "draft"
+    "contentStatus": "ready"
   },
   {
     "regionName": "서대문구",
@@ -209,11 +389,22 @@
     "parentSlug": "seoul",
     "sido": "서울",
     "regionType": "gu",
-    "nearbyStations": ["신촌역", "홍제역", "독립문역", "충정로역"],
-    "nearbyAreas": ["신촌동", "연희동", "홍은동", "홍제동", "남가좌동"],
+    "nearbyStations": [
+      "신촌역",
+      "홍제역",
+      "독립문역",
+      "충정로역"
+    ],
+    "nearbyAreas": [
+      "신촌동",
+      "연희동",
+      "홍은동",
+      "홍제동",
+      "남가좌동"
+    ],
     "contentFocus": "신촌 대학가 상권과 안산 자락을 끼고 형성된 서북권 생활 지역입니다.",
     "indexPriority": 2,
-    "contentStatus": "draft"
+    "contentStatus": "ready"
   },
   {
     "regionName": "성북구",
@@ -221,11 +412,22 @@
     "parentSlug": "seoul",
     "sido": "서울",
     "regionType": "gu",
-    "nearbyStations": ["성신여대입구역", "한성대입구역", "길음역", "보문역"],
-    "nearbyAreas": ["정릉동", "길음동", "돈암동", "안암동", "성북동"],
+    "nearbyStations": [
+      "성신여대입구역",
+      "한성대입구역",
+      "길음역",
+      "보문역"
+    ],
+    "nearbyAreas": [
+      "정릉동",
+      "길음동",
+      "돈암동",
+      "안암동",
+      "성북동"
+    ],
     "contentFocus": "대학가와 한옥 주택가가 공존하는 도심 인접 동북권 주거 지역입니다.",
     "indexPriority": 2,
-    "contentStatus": "draft"
+    "contentStatus": "ready"
   },
   {
     "regionName": "양천구",
@@ -233,11 +435,20 @@
     "parentSlug": "seoul",
     "sido": "서울",
     "regionType": "gu",
-    "nearbyStations": ["목동역", "오목교역", "신정네거리역", "양천향교역"],
-    "nearbyAreas": ["목동", "신정동", "신월동"],
+    "nearbyStations": [
+      "목동역",
+      "오목교역",
+      "신정네거리역",
+      "양천향교역"
+    ],
+    "nearbyAreas": [
+      "목동",
+      "신정동",
+      "신월동"
+    ],
     "contentFocus": "목동 학원가와 대단지 아파트로 유명한 서남권 교육·주거 중심 지역입니다.",
     "indexPriority": 2,
-    "contentStatus": "draft"
+    "contentStatus": "ready"
   },
   {
     "regionName": "용산구",
@@ -245,11 +456,22 @@
     "parentSlug": "seoul",
     "sido": "서울",
     "regionType": "gu",
-    "nearbyStations": ["용산역", "이태원역", "삼각지역", "한남역"],
-    "nearbyAreas": ["이태원동", "한남동", "이촌동", "용산동", "원효로"],
+    "nearbyStations": [
+      "용산역",
+      "이태원역",
+      "삼각지역",
+      "한남역"
+    ],
+    "nearbyAreas": [
+      "이태원동",
+      "한남동",
+      "이촌동",
+      "용산동",
+      "원효로"
+    ],
     "contentFocus": "이태원·한남동과 용산 개발지가 어우러진 한강변 도심 중심 지역입니다.",
     "indexPriority": 2,
-    "contentStatus": "draft"
+    "contentStatus": "ready"
   },
   {
     "regionName": "은평구",
@@ -257,11 +479,22 @@
     "parentSlug": "seoul",
     "sido": "서울",
     "regionType": "gu",
-    "nearbyStations": ["연신내역", "불광역", "구파발역", "녹번역"],
-    "nearbyAreas": ["불광동", "응암동", "역촌동", "진관동", "녹번동"],
+    "nearbyStations": [
+      "연신내역",
+      "불광역",
+      "구파발역",
+      "녹번역"
+    ],
+    "nearbyAreas": [
+      "불광동",
+      "응암동",
+      "역촌동",
+      "진관동",
+      "녹번동"
+    ],
     "contentFocus": "북한산 자락 은평뉴타운과 연신내 상권이 발달한 서북권 주거 지역입니다.",
     "indexPriority": 2,
-    "contentStatus": "draft"
+    "contentStatus": "ready"
   },
   {
     "regionName": "종로구",
@@ -269,11 +502,22 @@
     "parentSlug": "seoul",
     "sido": "서울",
     "regionType": "gu",
-    "nearbyStations": ["종각역", "종로3가역", "광화문역", "안국역"],
-    "nearbyAreas": ["청운효자동", "삼청동", "혜화동", "이화동", "사직동"],
+    "nearbyStations": [
+      "종각역",
+      "종로3가역",
+      "광화문역",
+      "안국역"
+    ],
+    "nearbyAreas": [
+      "청운효자동",
+      "삼청동",
+      "혜화동",
+      "이화동",
+      "사직동"
+    ],
     "contentFocus": "경복궁과 광화문을 품은 서울의 역사·행정 중심 도심 지역입니다.",
     "indexPriority": 2,
-    "contentStatus": "draft"
+    "contentStatus": "ready"
   },
   {
     "regionName": "중구",
@@ -281,11 +525,22 @@
     "parentSlug": "seoul",
     "sido": "서울",
     "regionType": "gu",
-    "nearbyStations": ["서울역", "을지로입구역", "동대문역사문화공원역", "명동역"],
-    "nearbyAreas": ["명동", "을지로동", "신당동", "황학동", "장충동"],
+    "nearbyStations": [
+      "서울역",
+      "을지로입구역",
+      "동대문역사문화공원역",
+      "명동역"
+    ],
+    "nearbyAreas": [
+      "명동",
+      "을지로동",
+      "신당동",
+      "황학동",
+      "장충동"
+    ],
     "contentFocus": "명동·남대문시장 등 서울을 대표하는 상업과 관광이 집중된 도심 지역입니다.",
     "indexPriority": 2,
-    "contentStatus": "draft"
+    "contentStatus": "ready"
   },
   {
     "regionName": "중랑구",
@@ -293,11 +548,22 @@
     "parentSlug": "seoul",
     "sido": "서울",
     "regionType": "gu",
-    "nearbyStations": ["상봉역", "면목역", "중화역", "사가정역"],
-    "nearbyAreas": ["면목동", "상봉동", "중화동", "묵동", "신내동"],
+    "nearbyStations": [
+      "상봉역",
+      "면목역",
+      "중화역",
+      "사가정역"
+    ],
+    "nearbyAreas": [
+      "면목동",
+      "상봉동",
+      "중화동",
+      "묵동",
+      "신내동"
+    ],
     "contentFocus": "상봉 환승 상권과 중랑천을 끼고 형성된 동북권 서민 주거 지역입니다.",
     "indexPriority": 2,
-    "contentStatus": "draft"
+    "contentStatus": "ready"
   },
   {
     "regionName": "수원시",
@@ -305,8 +571,19 @@
     "parentSlug": "gyeonggi",
     "sido": "경기",
     "regionType": "city",
-    "nearbyStations": ["수원역", "수원시청역", "영통역", "광교중앙역"],
-    "nearbyAreas": ["영통동", "인계동", "권선동", "정자동", "광교"],
+    "nearbyStations": [
+      "수원역",
+      "수원시청역",
+      "영통역",
+      "광교중앙역"
+    ],
+    "nearbyAreas": [
+      "영통동",
+      "인계동",
+      "권선동",
+      "정자동",
+      "광교"
+    ],
     "contentFocus": "화성행궁과 광교 신도시를 품은 경기 남부 최대 행정·상업 중심 도시입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -317,8 +594,19 @@
     "parentSlug": "gyeonggi",
     "sido": "경기",
     "regionType": "city",
-    "nearbyStations": ["판교역", "서현역", "모란역", "야탑역"],
-    "nearbyAreas": ["분당동", "판교동", "정자동", "수내동", "야탑동"],
+    "nearbyStations": [
+      "판교역",
+      "서현역",
+      "모란역",
+      "야탑역"
+    ],
+    "nearbyAreas": [
+      "분당동",
+      "판교동",
+      "정자동",
+      "수내동",
+      "야탑동"
+    ],
     "contentFocus": "판교 테크노밸리와 분당 신도시를 중심으로 한 경기 남부 첨단·주거 도시입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -329,8 +617,19 @@
     "parentSlug": "gyeonggi",
     "sido": "경기",
     "regionType": "city",
-    "nearbyStations": ["대화역", "정발산역", "백석역", "화정역"],
-    "nearbyAreas": ["일산동", "주엽동", "정발산동", "화정동", "행신동"],
+    "nearbyStations": [
+      "대화역",
+      "정발산역",
+      "백석역",
+      "화정역"
+    ],
+    "nearbyAreas": [
+      "일산동",
+      "주엽동",
+      "정발산동",
+      "화정동",
+      "행신동"
+    ],
     "contentFocus": "일산 호수공원과 킨텍스를 끼고 발달한 경기 서북부 신도시 생활권입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -341,8 +640,19 @@
     "parentSlug": "gyeonggi",
     "sido": "경기",
     "regionType": "city",
-    "nearbyStations": ["기흥역", "동백역", "수지구청역", "신갈역"],
-    "nearbyAreas": ["수지동", "기흥동", "동백동", "보정동", "신갈동"],
+    "nearbyStations": [
+      "기흥역",
+      "동백역",
+      "수지구청역",
+      "신갈역"
+    ],
+    "nearbyAreas": [
+      "수지동",
+      "기흥동",
+      "동백동",
+      "보정동",
+      "신갈동"
+    ],
     "contentFocus": "수지·기흥 택지지구와 에버랜드를 품은 경기 남부 대규모 주거 도시입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -353,8 +663,19 @@
     "parentSlug": "gyeonggi",
     "sido": "경기",
     "regionType": "city",
-    "nearbyStations": ["도농역", "별내역", "다산역", "평내호평역"],
-    "nearbyAreas": ["다산동", "별내동", "화도읍", "진접읍", "와부읍"],
+    "nearbyStations": [
+      "도농역",
+      "별내역",
+      "다산역",
+      "평내호평역"
+    ],
+    "nearbyAreas": [
+      "다산동",
+      "별내동",
+      "화도읍",
+      "진접읍",
+      "와부읍"
+    ],
     "contentFocus": "다산·별내 신도시와 북한강을 끼고 빠르게 성장하는 경기 동북부 도시입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -365,8 +686,19 @@
     "parentSlug": "gyeonggi",
     "sido": "경기",
     "regionType": "city",
-    "nearbyStations": ["구래역", "장기역", "사우역", "걸포북변역"],
-    "nearbyAreas": ["장기동", "구래동", "사우동", "운양동", "풍무동"],
+    "nearbyStations": [
+      "구래역",
+      "장기역",
+      "사우역",
+      "걸포북변역"
+    ],
+    "nearbyAreas": [
+      "장기동",
+      "구래동",
+      "사우동",
+      "운양동",
+      "풍무동"
+    ],
     "contentFocus": "한강신도시를 중심으로 인구가 빠르게 늘어난 경기 서부 신흥 도시입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -377,8 +709,18 @@
     "parentSlug": "gyeonggi",
     "sido": "경기",
     "regionType": "city",
-    "nearbyStations": ["광명역", "철산역", "광명사거리역"],
-    "nearbyAreas": ["철산동", "하안동", "소하동", "광명동", "일직동"],
+    "nearbyStations": [
+      "광명역",
+      "철산역",
+      "광명사거리역"
+    ],
+    "nearbyAreas": [
+      "철산동",
+      "하안동",
+      "소하동",
+      "광명동",
+      "일직동"
+    ],
     "contentFocus": "KTX 광명역과 철산 상권을 끼고 서울 생활권에 가까운 경기 서남부 도시입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -389,8 +731,17 @@
     "parentSlug": "gyeonggi",
     "sido": "경기",
     "regionType": "city",
-    "nearbyStations": ["구리역", "돌다리", "토평"],
-    "nearbyAreas": ["수택동", "교문동", "인창동", "토평동"],
+    "nearbyStations": [
+      "구리역",
+      "돌다리",
+      "토평"
+    ],
+    "nearbyAreas": [
+      "수택동",
+      "교문동",
+      "인창동",
+      "토평동"
+    ],
     "contentFocus": "한강과 아차산을 끼고 서울과 인접한 경기 동부 소규모 생활 도시입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -401,8 +752,18 @@
     "parentSlug": "gyeonggi",
     "sido": "경기",
     "regionType": "city",
-    "nearbyStations": ["산본역", "금정역", "군포역", "대야미역"],
-    "nearbyAreas": ["산본동", "당동", "금정동", "재궁동"],
+    "nearbyStations": [
+      "산본역",
+      "금정역",
+      "군포역",
+      "대야미역"
+    ],
+    "nearbyAreas": [
+      "산본동",
+      "당동",
+      "금정동",
+      "재궁동"
+    ],
     "contentFocus": "산본 신도시를 중심으로 형성된 경기 남부 안정적 주거 생활권입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -413,8 +774,19 @@
     "parentSlug": "gyeonggi",
     "sido": "경기",
     "regionType": "city",
-    "nearbyStations": ["정왕역", "시흥시청역", "신천역", "오이도역"],
-    "nearbyAreas": ["정왕동", "배곧", "은행동", "대야동", "신천동"],
+    "nearbyStations": [
+      "정왕역",
+      "시흥시청역",
+      "신천역",
+      "오이도역"
+    ],
+    "nearbyAreas": [
+      "정왕동",
+      "배곧",
+      "은행동",
+      "대야동",
+      "신천동"
+    ],
     "contentFocus": "배곧신도시와 시화공단을 끼고 성장하는 경기 서해안 신흥 도시입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -425,8 +797,19 @@
     "parentSlug": "gyeonggi",
     "sido": "경기",
     "regionType": "city",
-    "nearbyStations": ["부천역", "중동역", "송내역", "상동역"],
-    "nearbyAreas": ["중동", "상동", "원미동", "소사동", "역곡동"],
+    "nearbyStations": [
+      "부천역",
+      "중동역",
+      "송내역",
+      "상동역"
+    ],
+    "nearbyAreas": [
+      "중동",
+      "상동",
+      "원미동",
+      "소사동",
+      "역곡동"
+    ],
     "contentFocus": "중동·상동 상권과 영화제로 유명한 서울·인천 사이 경기 서부 도시입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -437,8 +820,19 @@
     "parentSlug": "gyeonggi",
     "sido": "경기",
     "regionType": "city",
-    "nearbyStations": ["경기광주역", "곤지암역", "초월역", "삼동역"],
-    "nearbyAreas": ["경안동", "송정동", "오포읍", "곤지암읍", "태전동"],
+    "nearbyStations": [
+      "경기광주역",
+      "곤지암역",
+      "초월역",
+      "삼동역"
+    ],
+    "nearbyAreas": [
+      "경안동",
+      "송정동",
+      "오포읍",
+      "곤지암읍",
+      "태전동"
+    ],
     "contentFocus": "팔당호와 도예촌을 끼고 택지개발이 진행되는 경기 동부 생활 도시입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -449,8 +843,19 @@
     "parentSlug": "gyeonggi",
     "sido": "경기",
     "regionType": "city",
-    "nearbyStations": ["안양역", "범계역", "평촌역", "인덕원역"],
-    "nearbyAreas": ["평촌동", "범계동", "안양동", "비산동", "호계동"],
+    "nearbyStations": [
+      "안양역",
+      "범계역",
+      "평촌역",
+      "인덕원역"
+    ],
+    "nearbyAreas": [
+      "평촌동",
+      "범계동",
+      "안양동",
+      "비산동",
+      "호계동"
+    ],
     "contentFocus": "평촌 학원가와 범계 상권을 중심으로 한 경기 남부 핵심 주거 도시입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -461,8 +866,19 @@
     "parentSlug": "gyeonggi",
     "sido": "경기",
     "regionType": "city",
-    "nearbyStations": ["하남검단산역", "하남시청역", "미사역", "하남풍산역"],
-    "nearbyAreas": ["미사동", "신장동", "덕풍동", "풍산동", "망월동"],
+    "nearbyStations": [
+      "하남검단산역",
+      "하남시청역",
+      "미사역",
+      "하남풍산역"
+    ],
+    "nearbyAreas": [
+      "미사동",
+      "신장동",
+      "덕풍동",
+      "풍산동",
+      "망월동"
+    ],
     "contentFocus": "미사강변도시와 스타필드를 끼고 빠르게 성장한 경기 동부 신도시입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -473,8 +889,19 @@
     "parentSlug": "gyeonggi",
     "sido": "경기",
     "regionType": "city",
-    "nearbyStations": ["동탄역", "병점역", "능동", "오산대역"],
-    "nearbyAreas": ["동탄", "봉담읍", "남양읍", "병점동", "향남읍"],
+    "nearbyStations": [
+      "동탄역",
+      "병점역",
+      "능동",
+      "오산대역"
+    ],
+    "nearbyAreas": [
+      "동탄",
+      "봉담읍",
+      "남양읍",
+      "병점동",
+      "향남읍"
+    ],
     "contentFocus": "동탄신도시와 산업단지를 품고 인구가 급증한 경기 남부 대형 도시입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -485,8 +912,19 @@
     "parentSlug": "gyeonggi",
     "sido": "경기",
     "regionType": "city",
-    "nearbyStations": ["평택역", "지제역", "송탄역", "서정리역"],
-    "nearbyAreas": ["비전동", "지제동", "송탄동", "안중읍", "고덕동"],
+    "nearbyStations": [
+      "평택역",
+      "지제역",
+      "송탄역",
+      "서정리역"
+    ],
+    "nearbyAreas": [
+      "비전동",
+      "지제동",
+      "송탄동",
+      "안중읍",
+      "고덕동"
+    ],
     "contentFocus": "삼성 반도체단지와 평택항을 끼고 성장하는 경기 최남단 산업 도시입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -497,8 +935,19 @@
     "parentSlug": "gyeonggi",
     "sido": "경기",
     "regionType": "city",
-    "nearbyStations": ["중앙역", "고잔역", "한대앞역", "상록수역"],
-    "nearbyAreas": ["고잔동", "본오동", "사동", "원곡동", "초지동"],
+    "nearbyStations": [
+      "중앙역",
+      "고잔역",
+      "한대앞역",
+      "상록수역"
+    ],
+    "nearbyAreas": [
+      "고잔동",
+      "본오동",
+      "사동",
+      "원곡동",
+      "초지동"
+    ],
     "contentFocus": "반월공단과 다문화 상권이 어우러진 경기 서해안 산업·주거 도시입니다.",
     "indexPriority": 2,
     "contentStatus": "draft"
@@ -509,8 +958,19 @@
     "parentSlug": "gyeonggi",
     "sido": "경기",
     "regionType": "city",
-    "nearbyStations": ["운정역", "금촌역", "파주역", "월롱역"],
-    "nearbyAreas": ["운정동", "금촌동", "문산읍", "교하동", "조리읍"],
+    "nearbyStations": [
+      "운정역",
+      "금촌역",
+      "파주역",
+      "월롱역"
+    ],
+    "nearbyAreas": [
+      "운정동",
+      "금촌동",
+      "문산읍",
+      "교하동",
+      "조리읍"
+    ],
     "contentFocus": "운정신도시와 출판단지를 품은 경기 서북부 접경 신흥 도시입니다.",
     "indexPriority": 2,
     "contentStatus": "draft"
@@ -521,8 +981,18 @@
     "parentSlug": "gyeonggi",
     "sido": "경기",
     "regionType": "city",
-    "nearbyStations": ["오산역", "오산대역", "세마역"],
-    "nearbyAreas": ["원동", "갈곶동", "세교동", "부산동", "중앙동"],
+    "nearbyStations": [
+      "오산역",
+      "오산대역",
+      "세마역"
+    ],
+    "nearbyAreas": [
+      "원동",
+      "갈곶동",
+      "세교동",
+      "부산동",
+      "중앙동"
+    ],
     "contentFocus": "세교지구 택지개발과 대학을 끼고 성장하는 경기 남부 소도시입니다.",
     "indexPriority": 2,
     "contentStatus": "draft"
@@ -533,8 +1003,19 @@
     "parentSlug": "gyeonggi",
     "sido": "경기",
     "regionType": "city",
-    "nearbyStations": ["의정부역", "회룡역", "망월사역", "녹양역"],
-    "nearbyAreas": ["의정부동", "신곡동", "민락동", "호원동", "가능동"],
+    "nearbyStations": [
+      "의정부역",
+      "회룡역",
+      "망월사역",
+      "녹양역"
+    ],
+    "nearbyAreas": [
+      "의정부동",
+      "신곡동",
+      "민락동",
+      "호원동",
+      "가능동"
+    ],
     "contentFocus": "부대찌개로 유명한 상권과 신도시를 끼고 발달한 경기 동북부 거점 도시입니다.",
     "indexPriority": 2,
     "contentStatus": "draft"
@@ -545,8 +1026,18 @@
     "parentSlug": "gyeonggi",
     "sido": "경기",
     "regionType": "city",
-    "nearbyStations": ["의왕역", "인덕원역", "오전"],
-    "nearbyAreas": ["오전동", "내손동", "고천동", "포일동", "청계동"],
+    "nearbyStations": [
+      "의왕역",
+      "인덕원역",
+      "오전"
+    ],
+    "nearbyAreas": [
+      "오전동",
+      "내손동",
+      "고천동",
+      "포일동",
+      "청계동"
+    ],
     "contentFocus": "백운호수와 철도연구단지를 끼고 안양과 인접한 경기 남부 소도시입니다.",
     "indexPriority": 2,
     "contentStatus": "draft"
@@ -557,8 +1048,19 @@
     "parentSlug": "gyeonggi",
     "sido": "경기",
     "regionType": "city",
-    "nearbyStations": ["과천역", "정부과천청사역", "선바위역", "대공원역"],
-    "nearbyAreas": ["중앙동", "별양동", "부림동", "갈현동", "문원동"],
+    "nearbyStations": [
+      "과천역",
+      "정부과천청사역",
+      "선바위역",
+      "대공원역"
+    ],
+    "nearbyAreas": [
+      "중앙동",
+      "별양동",
+      "부림동",
+      "갈현동",
+      "문원동"
+    ],
     "contentFocus": "정부청사와 대공원을 품은 관악산 자락의 경기 북부 쾌적한 행정 도시입니다.",
     "indexPriority": 2,
     "contentStatus": "draft"
@@ -569,8 +1071,18 @@
     "parentSlug": "gyeonggi",
     "sido": "경기",
     "regionType": "city",
-    "nearbyStations": ["이천역", "부발역", "신둔도예촌역"],
-    "nearbyAreas": ["창전동", "증포동", "부발읍", "마장면", "관고동"],
+    "nearbyStations": [
+      "이천역",
+      "부발역",
+      "신둔도예촌역"
+    ],
+    "nearbyAreas": [
+      "창전동",
+      "증포동",
+      "부발읍",
+      "마장면",
+      "관고동"
+    ],
     "contentFocus": "쌀과 도자기, 반도체 공장을 품은 경기 동남부 산업·농업 도시입니다.",
     "indexPriority": 2,
     "contentStatus": "draft"
@@ -581,8 +1093,18 @@
     "parentSlug": "gyeonggi",
     "sido": "경기",
     "regionType": "city",
-    "nearbyStations": ["안성종합버스터미널", "공도", "대덕"],
-    "nearbyAreas": ["봉산동", "공도읍", "대덕면", "당왕동", "금광면"],
+    "nearbyStations": [
+      "안성종합버스터미널",
+      "공도",
+      "대덕"
+    ],
+    "nearbyAreas": [
+      "봉산동",
+      "공도읍",
+      "대덕면",
+      "당왕동",
+      "금광면"
+    ],
     "contentFocus": "남사당놀이와 물류단지를 품은 경기 최남단 농업·산업 도시입니다.",
     "indexPriority": 2,
     "contentStatus": "draft"
@@ -593,8 +1115,19 @@
     "parentSlug": "gyeonggi",
     "sido": "경기",
     "regionType": "city",
-    "nearbyStations": ["양주역", "덕정역", "옥정", "회천"],
-    "nearbyAreas": ["옥정동", "회천동", "덕정동", "백석읍", "광적면"],
+    "nearbyStations": [
+      "양주역",
+      "덕정역",
+      "옥정",
+      "회천"
+    ],
+    "nearbyAreas": [
+      "옥정동",
+      "회천동",
+      "덕정동",
+      "백석읍",
+      "광적면"
+    ],
     "contentFocus": "옥정·회천 택지개발로 성장하는 경기 동북부 신흥 주거 도시입니다.",
     "indexPriority": 2,
     "contentStatus": "draft"
@@ -605,8 +1138,18 @@
     "parentSlug": "gyeonggi",
     "sido": "경기",
     "regionType": "city",
-    "nearbyStations": ["포천시외버스터미널", "송우리", "소흘"],
-    "nearbyAreas": ["신읍동", "소흘읍", "송우리", "영북면", "일동면"],
+    "nearbyStations": [
+      "포천시외버스터미널",
+      "송우리",
+      "소흘"
+    ],
+    "nearbyAreas": [
+      "신읍동",
+      "소흘읍",
+      "송우리",
+      "영북면",
+      "일동면"
+    ],
     "contentFocus": "산정호수와 허브아일랜드 등 관광·군부대가 어우러진 경기 북부 도시입니다.",
     "indexPriority": 2,
     "contentStatus": "draft"
@@ -617,8 +1160,17 @@
     "parentSlug": "gyeonggi",
     "sido": "경기",
     "regionType": "city",
-    "nearbyStations": ["여주역", "세종대왕릉역"],
-    "nearbyAreas": ["중앙동", "여흥동", "가남읍", "점동면", "오학동"],
+    "nearbyStations": [
+      "여주역",
+      "세종대왕릉역"
+    ],
+    "nearbyAreas": [
+      "중앙동",
+      "여흥동",
+      "가남읍",
+      "점동면",
+      "오학동"
+    ],
     "contentFocus": "남한강과 세종대왕릉, 아울렛을 품은 경기 동부 끝 관광·농업 도시입니다.",
     "indexPriority": 2,
     "contentStatus": "draft"
@@ -629,8 +1181,19 @@
     "parentSlug": "gyeonggi",
     "sido": "경기",
     "regionType": "gun",
-    "nearbyStations": ["양평역", "용문역", "양수역", "국수역"],
-    "nearbyAreas": ["양평읍", "용문면", "양서면", "강상면", "옥천면"],
+    "nearbyStations": [
+      "양평역",
+      "용문역",
+      "양수역",
+      "국수역"
+    ],
+    "nearbyAreas": [
+      "양평읍",
+      "용문면",
+      "양서면",
+      "강상면",
+      "옥천면"
+    ],
     "contentFocus": "남한강 두물머리와 전원주택이 어우러진 경기 동부 자연 친화 군 지역입니다.",
     "indexPriority": 2,
     "contentStatus": "draft"
@@ -641,8 +1204,19 @@
     "parentSlug": "gyeonggi",
     "sido": "경기",
     "regionType": "gun",
-    "nearbyStations": ["가평역", "청평역", "상천역", "대성리역"],
-    "nearbyAreas": ["가평읍", "청평면", "설악면", "조종면", "상면"],
+    "nearbyStations": [
+      "가평역",
+      "청평역",
+      "상천역",
+      "대성리역"
+    ],
+    "nearbyAreas": [
+      "가평읍",
+      "청평면",
+      "설악면",
+      "조종면",
+      "상면"
+    ],
     "contentFocus": "남이섬과 자라섬 등 북한강 관광지가 밀집한 경기 동북부 자연 군 지역입니다.",
     "indexPriority": 2,
     "contentStatus": "draft"
@@ -653,8 +1227,18 @@
     "parentSlug": "gyeonggi",
     "sido": "경기",
     "regionType": "gun",
-    "nearbyStations": ["연천역", "전곡역", "청산역"],
-    "nearbyAreas": ["연천읍", "전곡읍", "청산면", "백학면", "미산면"],
+    "nearbyStations": [
+      "연천역",
+      "전곡역",
+      "청산역"
+    ],
+    "nearbyAreas": [
+      "연천읍",
+      "전곡읍",
+      "청산면",
+      "백학면",
+      "미산면"
+    ],
     "contentFocus": "한탄강과 선사유적을 품은 경기 최북단 접경 농촌 군 지역입니다.",
     "indexPriority": 2,
     "contentStatus": "draft"
@@ -665,8 +1249,19 @@
     "parentSlug": "gyeonggi",
     "sido": "경기",
     "regionType": "city",
-    "nearbyStations": ["동두천역", "보산역", "동두천중앙역", "지행역"],
-    "nearbyAreas": ["생연동", "보산동", "지행동", "송내동", "상패동"],
+    "nearbyStations": [
+      "동두천역",
+      "보산역",
+      "동두천중앙역",
+      "지행역"
+    ],
+    "nearbyAreas": [
+      "생연동",
+      "보산동",
+      "지행동",
+      "송내동",
+      "상패동"
+    ],
     "contentFocus": "미군기지와 소요산을 끼고 형성된 경기 최북단 소규모 생활 도시입니다.",
     "indexPriority": 2,
     "contentStatus": "draft"
@@ -677,8 +1272,19 @@
     "parentSlug": "incheon",
     "sido": "인천",
     "regionType": "gu",
-    "nearbyStations": ["부평역", "부평구청역", "부평시장역", "갈산역"],
-    "nearbyAreas": ["부평동", "산곡동", "십정동", "삼산동", "청천동"],
+    "nearbyStations": [
+      "부평역",
+      "부평구청역",
+      "부평시장역",
+      "갈산역"
+    ],
+    "nearbyAreas": [
+      "부평동",
+      "산곡동",
+      "십정동",
+      "삼산동",
+      "청천동"
+    ],
     "contentFocus": "부평역 지하상가와 환승 거점을 중심으로 한 인천 최대 번화 생활권입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -689,8 +1295,19 @@
     "parentSlug": "incheon",
     "sido": "인천",
     "regionType": "gu",
-    "nearbyStations": ["인천시청역", "예술회관역", "구월역", "간석역"],
-    "nearbyAreas": ["구월동", "간석동", "만수동", "논현동", "서창동"],
+    "nearbyStations": [
+      "인천시청역",
+      "예술회관역",
+      "구월역",
+      "간석역"
+    ],
+    "nearbyAreas": [
+      "구월동",
+      "간석동",
+      "만수동",
+      "논현동",
+      "서창동"
+    ],
     "contentFocus": "인천시청과 구월동 상권을 품은 인천의 행정·상업 중심 생활권입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -701,8 +1318,19 @@
     "parentSlug": "incheon",
     "sido": "인천",
     "regionType": "gu",
-    "nearbyStations": ["센트럴파크역", "인천대입구역", "동춘역", "연수역"],
-    "nearbyAreas": ["송도동", "연수동", "옥련동", "청학동", "동춘동"],
+    "nearbyStations": [
+      "센트럴파크역",
+      "인천대입구역",
+      "동춘역",
+      "연수역"
+    ],
+    "nearbyAreas": [
+      "송도동",
+      "연수동",
+      "옥련동",
+      "청학동",
+      "동춘동"
+    ],
     "contentFocus": "송도국제도시를 품은 첨단 업무·주거가 발달한 인천 남부 신도시 지역입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -713,8 +1341,19 @@
     "parentSlug": "incheon",
     "sido": "인천",
     "regionType": "gu",
-    "nearbyStations": ["검암역", "청라국제도시역", "가정역", "검단사거리역"],
-    "nearbyAreas": ["청라동", "검단", "가정동", "당하동", "석남동"],
+    "nearbyStations": [
+      "검암역",
+      "청라국제도시역",
+      "가정역",
+      "검단사거리역"
+    ],
+    "nearbyAreas": [
+      "청라동",
+      "검단",
+      "가정동",
+      "당하동",
+      "석남동"
+    ],
     "contentFocus": "청라국제도시와 검단신도시가 성장하는 인천 서북부 신흥 주거 지역입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -725,8 +1364,19 @@
     "parentSlug": "incheon",
     "sido": "인천",
     "regionType": "gu",
-    "nearbyStations": ["주안역", "제물포역", "인하대역", "도화역"],
-    "nearbyAreas": ["주안동", "용현동", "관교동", "학익동", "도화동"],
+    "nearbyStations": [
+      "주안역",
+      "제물포역",
+      "인하대역",
+      "도화역"
+    ],
+    "nearbyAreas": [
+      "주안동",
+      "용현동",
+      "관교동",
+      "학익동",
+      "도화동"
+    ],
     "contentFocus": "주안 상권과 인하대를 끼고 형성된 인천 중심부 전통 주거 지역입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -737,8 +1387,19 @@
     "parentSlug": "incheon",
     "sido": "인천",
     "regionType": "gu",
-    "nearbyStations": ["계산역", "작전역", "임학역", "귤현역"],
-    "nearbyAreas": ["계산동", "작전동", "효성동", "병방동", "임학동"],
+    "nearbyStations": [
+      "계산역",
+      "작전역",
+      "임학역",
+      "귤현역"
+    ],
+    "nearbyAreas": [
+      "계산동",
+      "작전동",
+      "효성동",
+      "병방동",
+      "임학동"
+    ],
     "contentFocus": "계양산을 배경으로 계산·작전 상권이 발달한 인천 동북부 주거 지역입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -749,8 +1410,18 @@
     "parentSlug": "incheon",
     "sido": "인천",
     "regionType": "gu",
-    "nearbyStations": ["인천역", "신포역", "동인천역"],
-    "nearbyAreas": ["신포동", "신흥동", "운서동", "영종동", "북성동"],
+    "nearbyStations": [
+      "인천역",
+      "신포역",
+      "동인천역"
+    ],
+    "nearbyAreas": [
+      "신포동",
+      "신흥동",
+      "운서동",
+      "영종동",
+      "북성동"
+    ],
     "contentFocus": "차이나타운과 인천공항, 영종도를 품은 인천 개항기 역사·관문 지역입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -761,8 +1432,17 @@
     "parentSlug": "incheon",
     "sido": "인천",
     "regionType": "gu",
-    "nearbyStations": ["동인천역", "도원역"],
-    "nearbyAreas": ["송림동", "송현동", "화수동", "만석동", "금창동"],
+    "nearbyStations": [
+      "동인천역",
+      "도원역"
+    ],
+    "nearbyAreas": [
+      "송림동",
+      "송현동",
+      "화수동",
+      "만석동",
+      "금창동"
+    ],
     "contentFocus": "배다리 헌책방거리와 옛 공업지대를 품은 인천 원도심 지역입니다.",
     "indexPriority": 2,
     "contentStatus": "draft"
@@ -773,8 +1453,17 @@
     "parentSlug": "incheon",
     "sido": "인천",
     "regionType": "gun",
-    "nearbyStations": ["강화버스터미널", "온수리"],
-    "nearbyAreas": ["강화읍", "길상면", "선원면", "불은면", "화도면"],
+    "nearbyStations": [
+      "강화버스터미널",
+      "온수리"
+    ],
+    "nearbyAreas": [
+      "강화읍",
+      "길상면",
+      "선원면",
+      "불은면",
+      "화도면"
+    ],
     "contentFocus": "고인돌과 마니산 등 역사 유적이 풍부한 인천 서북부 섬 군 지역입니다.",
     "indexPriority": 2,
     "contentStatus": "draft"
@@ -785,8 +1474,18 @@
     "parentSlug": "incheon",
     "sido": "인천",
     "regionType": "gun",
-    "nearbyStations": ["인천항연안여객터미널", "연안부두", "영흥대교"],
-    "nearbyAreas": ["백령면", "연평면", "덕적면", "영흥면", "북도면"],
+    "nearbyStations": [
+      "인천항연안여객터미널",
+      "연안부두",
+      "영흥대교"
+    ],
+    "nearbyAreas": [
+      "백령면",
+      "연평면",
+      "덕적면",
+      "영흥면",
+      "북도면"
+    ],
     "contentFocus": "백령도·연평도 등 서해 섬들로 이루어진 인천 도서 군 지역입니다.",
     "indexPriority": 2,
     "contentStatus": "draft"
@@ -797,8 +1496,19 @@
     "parentSlug": "busan",
     "sido": "부산",
     "regionType": "gu",
-    "nearbyStations": ["해운대역", "센텀시티역", "장산역", "벡스코역"],
-    "nearbyAreas": ["우동", "중동", "좌동", "반여동", "재송동"],
+    "nearbyStations": [
+      "해운대역",
+      "센텀시티역",
+      "장산역",
+      "벡스코역"
+    ],
+    "nearbyAreas": [
+      "우동",
+      "중동",
+      "좌동",
+      "반여동",
+      "재송동"
+    ],
     "contentFocus": "해운대 해수욕장과 센텀시티를 품은 부산 대표 관광·상업 중심 지역입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -809,8 +1519,19 @@
     "parentSlug": "busan",
     "sido": "부산",
     "regionType": "gu",
-    "nearbyStations": ["서면역", "부전역", "범내골역", "양정역"],
-    "nearbyAreas": ["부전동", "전포동", "양정동", "가야동", "범천동"],
+    "nearbyStations": [
+      "서면역",
+      "부전역",
+      "범내골역",
+      "양정역"
+    ],
+    "nearbyAreas": [
+      "부전동",
+      "전포동",
+      "양정동",
+      "가야동",
+      "범천동"
+    ],
     "contentFocus": "서면 번화가를 중심으로 부산 최대 상권이 밀집한 도심 중심 지역입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -821,8 +1542,19 @@
     "parentSlug": "busan",
     "sido": "부산",
     "regionType": "gu",
-    "nearbyStations": ["동래역", "명륜역", "온천장역", "교대역"],
-    "nearbyAreas": ["명륜동", "온천동", "사직동", "수안동", "복산동"],
+    "nearbyStations": [
+      "동래역",
+      "명륜역",
+      "온천장역",
+      "교대역"
+    ],
+    "nearbyAreas": [
+      "명륜동",
+      "온천동",
+      "사직동",
+      "수안동",
+      "복산동"
+    ],
     "contentFocus": "동래온천과 사직야구장을 품은 부산의 역사·생활 중심 주거 지역입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -833,8 +1565,19 @@
     "parentSlug": "busan",
     "sido": "부산",
     "regionType": "gu",
-    "nearbyStations": ["광안역", "수영역", "민락역", "금련산역"],
-    "nearbyAreas": ["광안동", "남천동", "민락동", "망미동", "수영동"],
+    "nearbyStations": [
+      "광안역",
+      "수영역",
+      "민락역",
+      "금련산역"
+    ],
+    "nearbyAreas": [
+      "광안동",
+      "남천동",
+      "민락동",
+      "망미동",
+      "수영동"
+    ],
     "contentFocus": "광안리 해변과 광안대교를 끼고 발달한 부산 해안 상업·주거 지역입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -845,8 +1588,19 @@
     "parentSlug": "busan",
     "sido": "부산",
     "regionType": "gu",
-    "nearbyStations": ["경성대부경대역", "대연역", "못골역", "지게골역"],
-    "nearbyAreas": ["대연동", "용호동", "문현동", "감만동", "우암동"],
+    "nearbyStations": [
+      "경성대부경대역",
+      "대연역",
+      "못골역",
+      "지게골역"
+    ],
+    "nearbyAreas": [
+      "대연동",
+      "용호동",
+      "문현동",
+      "감만동",
+      "우암동"
+    ],
     "contentFocus": "경성대 상권과 부경대를 끼고 대학 문화가 발달한 부산 남부 지역입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -857,8 +1611,17 @@
     "parentSlug": "busan",
     "sido": "부산",
     "regionType": "gu",
-    "nearbyStations": ["시청역", "연산역", "교대역", "거제역"],
-    "nearbyAreas": ["연산동", "거제동", "토곡"],
+    "nearbyStations": [
+      "시청역",
+      "연산역",
+      "교대역",
+      "거제역"
+    ],
+    "nearbyAreas": [
+      "연산동",
+      "거제동",
+      "토곡"
+    ],
     "contentFocus": "부산시청과 연산 교차로를 품은 부산의 행정·교통 중심 지역입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -869,8 +1632,19 @@
     "parentSlug": "busan",
     "sido": "부산",
     "regionType": "gu",
-    "nearbyStations": ["하단역", "당리역", "신평역", "괴정역"],
-    "nearbyAreas": ["하단동", "괴정동", "당리동", "신평동", "다대동"],
+    "nearbyStations": [
+      "하단역",
+      "당리역",
+      "신평역",
+      "괴정역"
+    ],
+    "nearbyAreas": [
+      "하단동",
+      "괴정동",
+      "당리동",
+      "신평동",
+      "다대동"
+    ],
     "contentFocus": "낙동강 하구와 다대포 해변을 끼고 형성된 부산 서남부 주거 지역입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -881,8 +1655,19 @@
     "parentSlug": "busan",
     "sido": "부산",
     "regionType": "gu",
-    "nearbyStations": ["사상역", "모덕역", "덕포역", "주례역"],
-    "nearbyAreas": ["괘법동", "감전동", "주례동", "덕포동", "모라동"],
+    "nearbyStations": [
+      "사상역",
+      "모덕역",
+      "덕포역",
+      "주례역"
+    ],
+    "nearbyAreas": [
+      "괘법동",
+      "감전동",
+      "주례동",
+      "덕포동",
+      "모라동"
+    ],
     "contentFocus": "서부터미널과 공업지대를 끼고 발달한 부산 서부 교통·산업 지역입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -893,8 +1678,19 @@
     "parentSlug": "busan",
     "sido": "부산",
     "regionType": "gu",
-    "nearbyStations": ["부산대역", "장전역", "구서역", "남산역"],
-    "nearbyAreas": ["장전동", "구서동", "부곡동", "금사동", "서동"],
+    "nearbyStations": [
+      "부산대역",
+      "장전역",
+      "구서역",
+      "남산역"
+    ],
+    "nearbyAreas": [
+      "장전동",
+      "구서동",
+      "부곡동",
+      "금사동",
+      "서동"
+    ],
     "contentFocus": "부산대 상권과 범어사를 품은 부산 동북부 대학·주거 지역입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -905,8 +1701,18 @@
     "parentSlug": "busan",
     "sido": "부산",
     "regionType": "gu",
-    "nearbyStations": ["대저역", "공항역", "명지"],
-    "nearbyAreas": ["명지동", "대저동", "녹산동", "지사동", "강동동"],
+    "nearbyStations": [
+      "대저역",
+      "공항역",
+      "명지"
+    ],
+    "nearbyAreas": [
+      "명지동",
+      "대저동",
+      "녹산동",
+      "지사동",
+      "강동동"
+    ],
     "contentFocus": "명지신도시와 김해공항, 녹산공단을 품은 부산 서부 신흥 지역입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -917,8 +1723,19 @@
     "parentSlug": "busan",
     "sido": "부산",
     "regionType": "gun",
-    "nearbyStations": ["기장역", "오시리아역", "일광역", "좌천역"],
-    "nearbyAreas": ["기장읍", "정관읍", "일광읍", "장안읍", "철마면"],
+    "nearbyStations": [
+      "기장역",
+      "오시리아역",
+      "일광역",
+      "좌천역"
+    ],
+    "nearbyAreas": [
+      "기장읍",
+      "정관읍",
+      "일광읍",
+      "장안읍",
+      "철마면"
+    ],
     "contentFocus": "정관신도시와 오시리아 관광단지를 품은 부산 동북부 신흥 군 지역입니다.",
     "indexPriority": 1,
     "contentStatus": "ready"
@@ -929,8 +1746,18 @@
     "parentSlug": "busan",
     "sido": "부산",
     "regionType": "gu",
-    "nearbyStations": ["남포역", "중앙역", "자갈치역"],
-    "nearbyAreas": ["남포동", "광복동", "중앙동", "보수동", "대청동"],
+    "nearbyStations": [
+      "남포역",
+      "중앙역",
+      "자갈치역"
+    ],
+    "nearbyAreas": [
+      "남포동",
+      "광복동",
+      "중앙동",
+      "보수동",
+      "대청동"
+    ],
     "contentFocus": "자갈치시장과 남포동 상권을 품은 부산의 원도심 관광·상업 지역입니다.",
     "indexPriority": 2,
     "contentStatus": "draft"
@@ -941,8 +1768,19 @@
     "parentSlug": "busan",
     "sido": "부산",
     "regionType": "gu",
-    "nearbyStations": ["토성역", "동대신역", "서대신역", "대티역"],
-    "nearbyAreas": ["동대신동", "서대신동", "암남동", "부민동", "남부민동"],
+    "nearbyStations": [
+      "토성역",
+      "동대신역",
+      "서대신역",
+      "대티역"
+    ],
+    "nearbyAreas": [
+      "동대신동",
+      "서대신동",
+      "암남동",
+      "부민동",
+      "남부민동"
+    ],
     "contentFocus": "송도해수욕장과 대학병원을 끼고 형성된 부산 서부 원도심 지역입니다.",
     "indexPriority": 2,
     "contentStatus": "draft"
@@ -953,8 +1791,19 @@
     "parentSlug": "busan",
     "sido": "부산",
     "regionType": "gu",
-    "nearbyStations": ["부산역", "초량역", "범일역", "좌천역"],
-    "nearbyAreas": ["초량동", "수정동", "범일동", "좌천동", "정관동"],
+    "nearbyStations": [
+      "부산역",
+      "초량역",
+      "범일역",
+      "좌천역"
+    ],
+    "nearbyAreas": [
+      "초량동",
+      "수정동",
+      "범일동",
+      "좌천동",
+      "정관동"
+    ],
     "contentFocus": "부산역과 차이나타운, 산복도로를 품은 부산 관문 원도심 지역입니다.",
     "indexPriority": 2,
     "contentStatus": "draft"
@@ -965,8 +1814,17 @@
     "parentSlug": "busan",
     "sido": "부산",
     "regionType": "gu",
-    "nearbyStations": ["남포역", "부산항대교"],
-    "nearbyAreas": ["남항동", "영선동", "청학동", "동삼동", "봉래동"],
+    "nearbyStations": [
+      "남포역",
+      "부산항대교"
+    ],
+    "nearbyAreas": [
+      "남항동",
+      "영선동",
+      "청학동",
+      "동삼동",
+      "봉래동"
+    ],
     "contentFocus": "태종대와 흰여울문화마을을 품은 부산의 섬으로 이루어진 해안 지역입니다.",
     "indexPriority": 2,
     "contentStatus": "draft"
@@ -977,8 +1835,19 @@
     "parentSlug": "busan",
     "sido": "부산",
     "regionType": "gu",
-    "nearbyStations": ["덕천역", "구포역", "화명역", "수정역"],
-    "nearbyAreas": ["덕천동", "구포동", "화명동", "만덕동", "금곡동"],
+    "nearbyStations": [
+      "덕천역",
+      "구포역",
+      "화명역",
+      "수정역"
+    ],
+    "nearbyAreas": [
+      "덕천동",
+      "구포동",
+      "화명동",
+      "만덕동",
+      "금곡동"
+    ],
     "contentFocus": "구포시장과 화명신도시를 끼고 낙동강변에 자리한 부산 북부 주거 지역입니다.",
     "indexPriority": 2,
     "contentStatus": "draft"

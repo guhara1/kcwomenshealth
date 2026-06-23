@@ -112,12 +112,15 @@ export interface DetailDongEntry {
   detail: DongDetail;
 }
 
-/** 상세 콘텐츠가 준비된 행정동 전체 (개별 페이지 생성용) */
+/** 상세 콘텐츠가 준비된 행정동 전체 (개별 페이지 생성용).
+ *  부모 구가 contentStatus="ready"(승격 완료)인 경우에만 페이지를 생성한다.
+ *  → 검증 전 부분 데이터로 페이지가 노출되는 것을 막아 도어웨이를 방지한다. */
 export const allDetailDongs = (): DetailDongEntry[] => {
   const out: DetailDongEntry[] = [];
   for (const [guSlug, map] of Object.entries(dongDetails)) {
     const gu = sigungus.find((s) => s.regionSlug === guSlug);
-    const sidoSlug = gu?.parentSlug ?? "seoul";
+    if (!gu || gu.contentStatus !== "ready") continue;
+    const sidoSlug = gu.parentSlug;
     const guDongs = dongsOf(guSlug);
     for (const [dongSlug, detail] of Object.entries(map)) {
       const dong =
