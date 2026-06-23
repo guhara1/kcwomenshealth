@@ -21,6 +21,7 @@ export default defineConfig({
       // noindex / 비공개 페이지는 sitemap 에서 제외
       filter: (page) => {
         if (page.includes("/privacy")) return false;
+        if (page.includes("/terms")) return false;
         const path = new URL(page).pathname;
         return !noindexPaths.includes(path);
       },
