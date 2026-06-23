@@ -3,6 +3,7 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 import Breadcrumbs from "../../../components/Breadcrumbs.astro";
 import LocalNav from "../../../components/LocalNav.astro";
 import PriceTable from "../../../components/PriceTable.astro";
+import ProgramLinks from "../../../components/ProgramLinks.astro";
 import { SITE, sidoName } from "../../../lib/site";
 import {
   sigungus,
@@ -253,6 +254,17 @@ const schema = noindex
           ))
         }
       </div>
+    </div>
+  </section>
+
+  <!-- 마사지 프로그램 내부링크 (롱테일) -->
+  <section class="section">
+    <div class="container">
+      <ProgramLinks
+        prefix={g.regionName}
+        title={`${g.regionName} 마사지 프로그램 안내`}
+        lead={`${g.regionName}에서 받을 수 있는 관리 종류별 안내입니다.`}
+      />
     </div>
   </section>
 

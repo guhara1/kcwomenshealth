@@ -1,0 +1,60 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import { programs } from "../../lib/data";
+import { breadcrumbSchema } from "../../lib/seo";
+
+const path = "/program/";
+const title = "마사지 프로그램 안내｜스웨디시·타이·아로마·발마사지";
+const description =
+  "출장마사지·홈타이 프로그램 안내. 스웨디시, 타이, 아로마테라피, 발마사지 등 관리 종류를 확인하세요.";
+const schema = [
+  breadcrumbSchema([
+    { name: "홈", path: "/" },
+    { name: "프로그램", path },
+  ]),
+];
+
+const cats: { key: string; label: string }[] = [
+  { key: "modality", label: "마사지 종류" },
+  { key: "beauty", label: "뷰티 케어" },
+  { key: "visit", label: "방문·시설 안내" },
+  { key: "option", label: "이용 옵션" },
+  { key: "audience", label: "이용 대상" },
+  { key: "pricing", label: "요금 안내" },
+];
+---
+
+<BaseLayout title={title} description={description} path={path} schema={schema}>
+  <Breadcrumbs items={[{ name: "홈", path: "/" }, { name: "프로그램" }]} />
+  <section class="section" style="padding-top:8px">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">마사지 프로그램</span>
+        <h1 class="section__title">출장마사지·홈타이 프로그램 안내</h1>
+        <p class="section__lead">
+          원하는 관리 종류와 이용 옵션을 선택해 자세한 안내를 확인하세요.
+        </p>
+      </div>
+
+      {
+        cats.map((c) => {
+          const list = programs.filter((p) => p.category === c.key);
+          return list.length ? (
+            <div style="margin-bottom:28px">
+              <h2 style="font-size:1.25rem">{c.label}</h2>
+              <div class="grid grid--3">
+                {list.map((p) => (
+                  <a class="card" href={`/program/${p.slug}/`}>
+                    <div class="card__title">{p.shortName} <span class="arrow">→</span></div>
+                    <p class="card__desc">{p.summary}</p>
+                  </a>
+                ))}
+              </div>
+            </div>
+          ) : null;
+        })
+      }
+    </div>
+  </section>
+</BaseLayout>

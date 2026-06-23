@@ -3,6 +3,7 @@ import BaseLayout from "../../../../layouts/BaseLayout.astro";
 import Breadcrumbs from "../../../../components/Breadcrumbs.astro";
 import LocalNav from "../../../../components/LocalNav.astro";
 import PriceTable from "../../../../components/PriceTable.astro";
+import ProgramLinks from "../../../../components/ProgramLinks.astro";
 import { SITE, sidoName } from "../../../../lib/site";
 import {
   allDetailDongs,
@@ -213,6 +214,12 @@ const schema = [
           {dong.name} 안내는 정보형이며 허위 후기·선정적 표현을 사용하지 않습니다.
         </p>
       </div>
+
+      <ProgramLinks
+        prefix={dong.name}
+        title={`${dong.name} 마사지 프로그램 안내`}
+        lead={`${dong.name}에서 받을 수 있는 관리 종류별 안내입니다.`}
+      />
 
       <h2>{dong.name} 페이지 중복 방지 운영 기준</h2>
       <p>

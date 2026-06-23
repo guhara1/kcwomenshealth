@@ -218,6 +218,50 @@ export const stationByName = (name: string) =>
   stations.find((s) => s.stationName === name);
 
 // ─────────────────────────────────────────────────────────────
+// 마사지 프로그램 (상단 메뉴 — 모달리티/옵션 안내)
+// ─────────────────────────────────────────────────────────────
+export interface ProgramFaq {
+  q: string;
+  a: string;
+}
+export interface Program {
+  slug: string;
+  name: string;
+  shortName: string;
+  category: string;
+  keywords: string[];
+  summary: string;
+  p1: string;
+  p2: string;
+  p3: string;
+  p4: string;
+  faq: ProgramFaq[];
+}
+
+const programModules = import.meta.glob<{ default: Program }>(
+  "../data/programs/*.json",
+  { eager: true }
+);
+const programOrder = [
+  "swedish", "thai", "aromatherapy", "lomilomi", "chinese",
+  "foot", "sports-meridian", "duri-course", "skincare", "waxing",
+  "home-care", "hotel-style", "spa-sauna", "24hours", "sleep",
+  "men", "women", "couple", "male-therapist", "discount",
+];
+const programMap: Record<string, Program> = {};
+for (const mod of Object.values(programModules)) {
+  const p = ((mod as any).default ?? mod) as Program;
+  if (p && p.slug) programMap[p.slug] = p;
+}
+export const programs: Program[] = programOrder
+  .map((s) => programMap[s])
+  .filter(Boolean)
+  .concat(
+    Object.values(programMap).filter((p) => !programOrder.includes(p.slug))
+  );
+export const getProgram = (slug: string) => programMap[slug];
+
+// ─────────────────────────────────────────────────────────────
 // 생활권(life-area) — 지역↔역 중간 허브
 // ─────────────────────────────────────────────────────────────
 export interface LifeArea {

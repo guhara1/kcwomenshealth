@@ -2,6 +2,7 @@
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import Breadcrumbs from "../../../components/Breadcrumbs.astro";
 import PriceTable from "../../../components/PriceTable.astro";
+import ProgramLinks from "../../../components/ProgramLinks.astro";
 import { SITE, sidoName } from "../../../lib/site";
 import {
   stations,
@@ -178,6 +179,12 @@ const schema = noindex
           불법·선정적 서비스는 제공하지 않습니다.
         </p>
       </div>
+
+      <ProgramLinks
+        prefix={st.stationName}
+        title={`${st.stationName} 마사지 프로그램 안내`}
+        lead={`${st.stationName} 인근에서 받을 수 있는 관리 종류별 안내입니다.`}
+      />
 
       <h2>{st.stationName} 자주 묻는 질문</h2>
       <div class="faq">

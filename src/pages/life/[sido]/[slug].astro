@@ -2,6 +2,7 @@
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import Breadcrumbs from "../../../components/Breadcrumbs.astro";
 import PriceTable from "../../../components/PriceTable.astro";
+import ProgramLinks from "../../../components/ProgramLinks.astro";
 import { SITE, sidoName } from "../../../lib/site";
 import {
   lifeAreas,
@@ -123,6 +124,12 @@ const schema = [
         <a href={`/station/${l.sidoSlug}/`}>{sido.regionName} 지하철역</a> ·
         <a href="/life/">전체 생활권</a>
       </p>
+
+      <ProgramLinks
+        prefix={l.name}
+        title={`${l.name} 마사지 프로그램 안내`}
+        lead={`${l.name}에서 받을 수 있는 관리 종류별 안내입니다.`}
+      />
 
       <h2>{l.name} 자주 묻는 질문</h2>
       <div class="faq">

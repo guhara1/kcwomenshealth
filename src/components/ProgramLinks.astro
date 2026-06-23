@@ -1,0 +1,39 @@
+---
+import { programs } from "../lib/data";
+
+interface Props {
+  /** 지역/역명 등 접두어 → 롱테일 앵커 텍스트 생성 (예: "강남구 스웨디시") */
+  prefix?: string;
+  /** 노출 개수 */
+  limit?: number;
+  title?: string;
+  lead?: string;
+}
+const {
+  prefix = "",
+  limit = 12,
+  title = "마사지 프로그램 안내",
+  lead = "원하는 관리 종류로 자세한 안내를 확인하세요.",
+} = Astro.props;
+
+const list = programs.slice(0, limit);
+const pfx = prefix ? prefix + " " : "";
+---
+
+{
+  list.length > 0 && (
+    <div class="program-links">
+      <h2 class="program-links__title">{title}</h2>
+      {lead && <p class="program-links__lead">{lead}</p>}
+      <div class="chip-list">
+        {list.map((p) => (
+          <a class="chip chip--soft" href={`/program/${p.slug}/`}>
+            {pfx}
+            {p.shortName}
+          </a>
+        ))}
+        <a class="chip" href="/program/">전체 프로그램</a>
+      </div>
+    </div>
+  )
+}

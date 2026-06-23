@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PriceTable from "../components/PriceTable.astro";
+import ProgramLinks from "../components/ProgramLinks.astro";
 import { SITE } from "../lib/site";
 import { sidos, services, prioritySigungus, stationsByGroup } from "../lib/data";
 import { breadcrumbSchema, faqSchema } from "../lib/seo";
@@ -169,6 +170,17 @@ const lifeAreas = sidos.flatMap((s) =>
           ))
         }
       </div>
+    </div>
+  </section>
+
+  <!-- 마사지 프로그램 내부링크 -->
+  <section class="section">
+    <div class="container">
+      <ProgramLinks
+        limit={20}
+        title="마사지 프로그램으로 찾기"
+        lead="스웨디시·타이·아로마테라피·발마사지 등 관리 종류별 안내를 확인하세요."
+      />
     </div>
   </section>
 
