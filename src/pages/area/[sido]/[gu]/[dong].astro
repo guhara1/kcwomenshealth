@@ -37,10 +37,10 @@ const stationLink = (name: string) => {
   return st ? `/station/${st.stationGroup}/${st.stationSlug}/` : null;
 };
 // 인접 동 → 같은 구 내 상세 페이지(있으면) 링크
-const guDongs = dongsOf(guSlug);
+const guDongs = dongsOf(sidoSlug, guSlug);
 const adjLink = (name: string) => {
   const d = guDongs.find((x) => x.name === name);
-  return d && hasDongDetail(guSlug, d.slug)
+  return d && hasDongDetail(sidoSlug, guSlug, d.slug)
     ? `/area/${sidoSlug}/${guSlug}/${d.slug}/`
     : null;
 };

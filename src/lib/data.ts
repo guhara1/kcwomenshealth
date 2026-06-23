@@ -73,25 +73,33 @@ export interface DongDetail {
   p3: string;
 }
 
-// dong-detail/{gu}.json 들을 자동 로드 (콘텐츠가 준비된 동만 색인 → 도어웨이 방지)
+// dong-detail/{sido}__{gu}.json 들을 자동 로드.
+// 구 슬러그가 시·도 간 중복(jung-gu 등)되므로 "시도/구" 복합키로 보관한다.
+// (콘텐츠가 준비된 동만 색인 → 도어웨이 방지)
 const detailModules = import.meta.glob<{ default: Record<string, DongDetail> }>(
   "../data/dong-detail/*.json",
   { eager: true }
 );
 const dongDetails: Record<string, Record<string, DongDetail>> = {};
 for (const [filePath, mod] of Object.entries(detailModules)) {
-  const gu = filePath.split("/").pop()!.replace(".json", "");
-  dongDetails[gu] = (mod as any).default ?? (mod as any);
+  const base = filePath.split("/").pop()!.replace(".json", "");
+  const [sido, gu] = base.includes("__") ? base.split("__") : ["seoul", base];
+  dongDetails[`${sido}/${gu}`] = (mod as any).default ?? (mod as any);
 }
+const detailKey = (sidoSlug: string, guSlug: string) => `${sidoSlug}/${guSlug}`;
 
-/** 특정 구·동의 상세 콘텐츠 (없으면 undefined → 페이지 미생성) */
+/** 특정 시도·구·동의 상세 콘텐츠 (없으면 undefined → 페이지 미생성) */
 export const dongDetailFor = (
+  sidoSlug: string,
   guSlug: string,
   dongSlug: string
-): DongDetail | undefined => dongDetails[guSlug]?.[dongSlug];
+): DongDetail | undefined => dongDetails[detailKey(sidoSlug, guSlug)]?.[dongSlug];
 
-export const hasDongDetail = (guSlug: string, dongSlug: string): boolean =>
-  Boolean(dongDetails[guSlug]?.[dongSlug]);
+export const hasDongDetail = (
+  sidoSlug: string,
+  guSlug: string,
+  dongSlug: string
+): boolean => Boolean(dongDetails[detailKey(sidoSlug, guSlug)]?.[dongSlug]);
 
 export const sidos = sidoData as Sido[];
 export const sigungus = sigunguData as Sigungu[];
@@ -99,14 +107,17 @@ export const stations = stationData as Station[];
 export const services = serviceData as Service[];
 const dongs = dongData as Record<string, Dong[]>;
 
-/** 자치구의 대표 행정동 목록 (ㄱㄴㄷ 정렬). 데이터 없으면 nearbyAreas 기반 폴백 */
-export const dongsOf = (guSlug: string): Dong[] => {
-  const list = dongs[guSlug];
-  if (list && list.length) {
-    return [...list].sort((a, b) => a.name.localeCompare(b.name, "ko"));
+/** 자치구의 대표 행정동 목록 (ㄱㄴㄷ 정렬). 시·도 단위로 구분한다. */
+export const dongsOf = (sidoSlug: string, guSlug: string): Dong[] => {
+  // 서울은 dong.json(요약 포함)을 우선 사용
+  if (sidoSlug === "seoul") {
+    const list = dongs[guSlug];
+    if (list && list.length) {
+      return [...list].sort((a, b) => a.name.localeCompare(b.name, "ko"));
+    }
   }
-  // 폴백: dong-detail에 한글 동명이 있으면 그것으로 목록 구성 (경기·인천·부산)
-  const det = dongDetails[guSlug];
+  // 비서울(또는 dong.json 없음)은 dong-detail의 한글 동명으로 목록 구성
+  const det = dongDetails[detailKey(sidoSlug, guSlug)];
   if (det) {
     return Object.entries(det)
       .map(([slug, d]) => ({
@@ -131,11 +142,13 @@ export interface DetailDongEntry {
  *  → 검증 전 부분 데이터로 페이지가 노출되는 것을 막아 도어웨이를 방지한다. */
 export const allDetailDongs = (): DetailDongEntry[] => {
   const out: DetailDongEntry[] = [];
-  for (const [guSlug, map] of Object.entries(dongDetails)) {
-    const gu = sigungus.find((s) => s.regionSlug === guSlug);
+  for (const [key, map] of Object.entries(dongDetails)) {
+    const [sidoSlug, guSlug] = key.split("/");
+    const gu = sigungus.find(
+      (s) => s.parentSlug === sidoSlug && s.regionSlug === guSlug
+    );
     if (!gu || gu.contentStatus !== "ready") continue;
-    const sidoSlug = gu.parentSlug;
-    const guDongs = dongsOf(guSlug);
+    const guDongs = dongsOf(sidoSlug, guSlug);
     for (const [dongSlug, detail] of Object.entries(map)) {
       const dong =
         guDongs.find((d) => d.slug === dongSlug) ??
@@ -167,9 +180,11 @@ export const getStation = (group: string, slug: string) =>
 export const getService = (slug: string) =>
   services.find((s) => s.slug === slug);
 
-/** 같은 시군구에 속한 역 */
-export const stationsInSigungu = (sigunguSlug: string) =>
-  stations.filter((s) => s.sigunguSlug === sigunguSlug);
+/** 같은 시군구에 속한 역 (시·도 단위로 구분 — sigunguSlug 중복 방지) */
+export const stationsInSigungu = (sidoSlug: string, sigunguSlug: string) =>
+  stations.filter(
+    (s) => s.stationGroup === sidoSlug && s.sigunguSlug === sigunguSlug
+  );
 
 /** 같은 권역 내 인접 역 (자기 자신 제외, n개) */
 export const nearbyStationsOf = (station: Station, n = 4) =>

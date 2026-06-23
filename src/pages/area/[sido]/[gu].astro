@@ -33,7 +33,7 @@ const path = `/area/${g.parentSlug}/${g.regionSlug}/`;
 const noindex = !isIndexable(g.contentStatus);
 
 // 대표 행정동 (ㄱㄴㄷ 정렬, 번호동 통합). 데이터 없으면 nearbyAreas 폴백
-const dongList = dongsOf(g.regionSlug);
+const dongList = dongsOf(g.parentSlug, g.regionSlug);
 const fallbackAreas = g.nearbyAreas.map((a) => ({ name: a, slug: "", blurb: "" }));
 const areaList = dongList.length ? dongList : fallbackAreas;
 
@@ -45,7 +45,7 @@ const pairA2 = areaList[2]?.name ?? pairA1;
 const smallList = areaList.length <= 9;
 
 // 역세권: 이 지역 소속 역 + 데이터에 등록된 인접역
-const guStations = stationsInSigungu(g.regionSlug);
+const guStations = stationsInSigungu(g.parentSlug, g.regionSlug);
 const stationByName = (name: string) =>
   stations.find((st) => st.stationName === name);
 
@@ -177,7 +177,7 @@ const schema = noindex
         {
           areaList.map((d) => {
             const href =
-              d.slug && hasDongDetail(g.regionSlug, d.slug)
+              d.slug && hasDongDetail(g.parentSlug, g.regionSlug, d.slug)
                 ? `/area/${g.parentSlug}/${g.regionSlug}/${d.slug}/`
                 : null;
             const Tag = href ? "a" : "div";
