@@ -1,0 +1,22 @@
+---
+import { SITE, TELEGRAM } from "../lib/site";
+---
+
+<nav class="mobile-bar" aria-label="하단 고정 메뉴">
+  <a href="/area/">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+    지역 찾기
+  </a>
+  <a href="/station/">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="14" rx="2"></rect><path d="M4 11h16M8 21l2-4M16 21l-2-4M9 7h6"></path></svg>
+    역 찾기
+  </a>
+  <a href={SITE.phoneHref} class="is-cta">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.69 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.56 2.81.69A2 2 0 0 1 22 16.92z"></path></svg>
+    전화예약
+  </a>
+  <a href={TELEGRAM.reservation} target="_blank" rel="noopener nofollow" class="is-cta">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 2.5 2.7 10.4c-1.3.5-1.3 1.7-.2 2l4.9 1.5 1.9 6c.2.7.5.8 1 .3l2.7-2.6 5 3.7c.6.4 1.1.2 1.3-.6L23.4 3.6c.2-.9-.4-1.4-1.4-1.1Z"></path></svg>
+    문의하기
+  </a>
+</nav>

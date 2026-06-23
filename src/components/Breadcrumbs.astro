@@ -1,0 +1,18 @@
+---
+interface Crumb {
+  name: string;
+  path?: string;
+}
+const { items } = Astro.props as { items: Crumb[] };
+---
+
+<nav class="container crumbs" aria-label="현재 위치">
+  {
+    items.map((c, i) => (
+      <>
+        {i > 0 && <span class="sep">/</span>}
+        {c.path ? <a href={c.path}>{c.name}</a> : <span>{c.name}</span>}
+      </>
+    ))
+  }
+</nav>

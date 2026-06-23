@@ -1,0 +1,19 @@
+{
+  "description": "색인 가능 조건 — 모두 충족하는 페이지만 색인(index)합니다.",
+  "indexConditions": [
+    "역/지역 주변 생활권 설명이 충분함",
+    "인접 행정동 2개 이상 연결 가능",
+    "내부링크 4개 이상 연결 가능",
+    "본문 1,500자 이상 작성 가능",
+    "예약 전 확인사항 포함",
+    "지역 페이지와 중복되지 않음"
+  ],
+  "indexPriority": {
+    "1": "1차 색인",
+    "2": "2차 색인",
+    "3": "3차 색인",
+    "0": "DB 보관, noindex"
+  },
+  "indexableStatuses": ["ready"],
+  "noindexStatuses": ["draft", "noindex", "blocked"]
+}

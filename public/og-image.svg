@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#060d1c"/>
+      <stop offset="0.6" stop-color="#0f2042"/>
+      <stop offset="1" stop-color="#16305f"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e6c55c"/>
+      <stop offset="1" stop-color="#b8902f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1050" cy="90" r="320" fill="#2f6bf2" opacity="0.22"/>
+  <circle cx="120" cy="560" r="260" fill="#d4af37" opacity="0.12"/>
+  <rect x="80" y="84" width="92" height="92" rx="20" fill="url(#gold)"/>
+  <text x="126" y="148" font-family="Pretendard, sans-serif" font-size="40" font-weight="900" fill="#0a1730" text-anchor="middle">VIP</text>
+  <text x="196" y="150" font-family="Pretendard, sans-serif" font-size="46" font-weight="800" fill="#ffffff">VIP 마사지</text>
+  <text x="80" y="300" font-family="Pretendard, sans-serif" font-size="74" font-weight="800" fill="#ffffff">서울·경기·인천·부산</text>
+  <text x="80" y="390" font-family="Pretendard, sans-serif" font-size="74" font-weight="800" fill="#ffffff">출장마사지·홈타이 안내</text>
+  <text x="80" y="470" font-family="Pretendard, sans-serif" font-size="36" font-weight="500" fill="#d8e2f4">지역별 · 지하철역별 생활권 예약 전 확인사항</text>
+  <rect x="80" y="510" width="360" height="68" rx="34" fill="#f97316"/>
+  <text x="260" y="554" font-family="Pretendard, sans-serif" font-size="32" font-weight="800" fill="#ffffff" text-anchor="middle">전화예약 0508-202-4719</text>
+</svg>

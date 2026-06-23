@@ -1,0 +1,61 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import { sidos, getSido, stationsByGroup } from "../../../lib/data";
+import { breadcrumbSchema } from "../../../lib/seo";
+
+export function getStaticPaths() {
+  return sidos.map((s) => ({ params: { group: s.regionSlug }, props: { s } }));
+}
+
+const { s } = Astro.props;
+const path = `/station/${s.regionSlug}/`;
+const sts = stationsByGroup(s.regionSlug);
+
+const title = `${s.regionName} 지하철역 안내｜역세권별 출장마사지·홈타이 생활권`;
+const description = `${s.regionName} 지하철역별 출장마사지·홈타이 생활권 안내. 가까운 역을 확인하세요.`;
+const schema = [
+  breadcrumbSchema([
+    { name: "홈", path: "/" },
+    { name: "지하철역 안내", path: "/station/" },
+    { name: `${s.regionName} 역`, path },
+  ]),
+];
+---
+
+<BaseLayout title={title} description={description} path={path} schema={schema}>
+  <Breadcrumbs
+    items={[
+      { name: "홈", path: "/" },
+      { name: "지하철역 안내", path: "/station/" },
+      { name: `${s.regionName} 역` },
+    ]}
+  />
+  <section class="section" style="padding-top:8px">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">{s.regionName} 지하철역</span>
+        <h1 class="section__title">{s.regionName} 역세권 생활권 안내</h1>
+        <p class="section__lead">
+          {s.regionName}의 대표 지하철역을 기준으로 주변 생활권과 인접 행정동,
+          방문 가능 지역을 확인하세요.
+        </p>
+      </div>
+      <div class="grid grid--3">
+        {
+          sts.map((st) => (
+            <a class="card" href={`/station/${st.stationGroup}/${st.stationSlug}/`}>
+              <div class="card__title">{st.stationName} <span class="arrow">→</span></div>
+              <p class="card__desc">{st.contentFocus}</p>
+              <div class="card__tags">
+                {st.nearbyAreas.slice(0, 3).map((a) => (
+                  <span class="tag">{a}</span>
+                ))}
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>

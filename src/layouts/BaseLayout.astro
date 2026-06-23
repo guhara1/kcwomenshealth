@@ -1,0 +1,93 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import MobileBar from "../components/MobileBar.astro";
+import { SITE } from "../lib/site";
+import {
+  clampDescription,
+  absoluteUrl,
+  localBusinessSchema,
+  websiteSchema,
+} from "../lib/seo";
+
+interface Props {
+  title: string;
+  description: string;
+  path?: string;
+  noindex?: boolean;
+  schema?: unknown[];
+  ogImage?: string;
+  ogType?: string;
+}
+
+const {
+  title,
+  description,
+  path = Astro.url.pathname,
+  noindex = false,
+  schema = [],
+  ogImage = SITE.ogImage,
+  ogType = "website",
+} = Astro.props;
+
+const desc = clampDescription(description, 80);
+const canonical = absoluteUrl(path);
+const fullTitle =
+  title === SITE.name ? title : `${title}｜${SITE.name}`;
+const ogImageUrl = absoluteUrl(ogImage);
+
+// 전역 스키마(LocalBusiness + WebSite) + 페이지별 스키마
+const graph = [localBusinessSchema(), websiteSchema(), ...schema];
+---
+
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={desc} />
+    <link rel="canonical" href={canonical} />
+    {
+      noindex ? (
+        <meta name="robots" content="noindex, follow" />
+      ) : (
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+      )
+    }
+
+    <!-- Open Graph / 선호 썸네일 지정 -->
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={desc} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:locale" content="ko_KR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={desc} />
+    <meta name="twitter:image" content={ogImageUrl} />
+
+    <meta name="theme-color" content="#0a1730" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    {
+      graph.map((node) => (
+        <script
+          type="application/ld+json"
+          set:html={JSON.stringify(node)}
+        />
+      ))
+    }
+  </head>
+  <body>
+    <Header />
+    <main id="content">
+      <slot />
+    </main>
+    <Footer />
+    <MobileBar />
+  </body>
+</html>

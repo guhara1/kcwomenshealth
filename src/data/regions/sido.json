@@ -1,0 +1,91 @@
+[
+  {
+    "regionName": "서울",
+    "regionSlug": "seoul",
+    "sido": "서울",
+    "regionType": "sido",
+    "nearbyStations": ["강남역", "잠실역", "홍대입구역", "여의도역", "신림역"],
+    "lifeAreas": [
+      "강남·역삼 생활권",
+      "삼성·선릉 생활권",
+      "잠실·송파 생활권",
+      "홍대·합정 생활권",
+      "여의도·영등포 생활권",
+      "신림·관악 생활권",
+      "구디·가디 생활권",
+      "건대·광진 생활권",
+      "왕십리·성동 생활권",
+      "용산·서울역 생활권"
+    ],
+    "contentFocus": "25개 구와 주요 역세권 중심의 대도시 생활권",
+    "indexPriority": 1,
+    "contentStatus": "ready"
+  },
+  {
+    "regionName": "경기도",
+    "regionSlug": "gyeonggi",
+    "sido": "경기",
+    "regionType": "sido",
+    "nearbyStations": ["수원역", "판교역", "정자역", "구래역", "오이도역"],
+    "lifeAreas": [
+      "수원역·인계동 생활권",
+      "분당·판교 생활권",
+      "야탑·서현 생활권",
+      "김포한강신도시 생활권",
+      "구리·다산 생활권",
+      "남양주 별내 생활권",
+      "부천 중동·상동 생활권",
+      "시흥 배곧·정왕 생활권",
+      "광명·철산 생활권",
+      "군포 산본·금정 생활권",
+      "안양 범계·평촌 생활권"
+    ],
+    "contentFocus": "수원·성남·고양·김포·시흥 등 도시 단위 생활권",
+    "indexPriority": 1,
+    "contentStatus": "ready"
+  },
+  {
+    "regionName": "인천",
+    "regionSlug": "incheon",
+    "sido": "인천",
+    "regionType": "sido",
+    "nearbyStations": ["부평역", "인천시청역", "송도달빛축제공원역", "계양역"],
+    "lifeAreas": [
+      "부평역·부평시장 생활권",
+      "구월동·인천시청 생활권",
+      "송도국제도시 생활권",
+      "연수·동춘 생활권",
+      "검단·완정 생활권",
+      "청라·가정 생활권",
+      "계양·작전 생활권",
+      "주안·미추홀 생활권",
+      "인천공항·영종 생활권"
+    ],
+    "contentFocus": "부평·송도·구월·검단·청라 생활권",
+    "indexPriority": 1,
+    "contentStatus": "ready"
+  },
+  {
+    "regionName": "부산",
+    "regionSlug": "busan",
+    "sido": "부산",
+    "regionType": "sido",
+    "nearbyStations": ["서면역", "해운대역", "센텀시티역", "부산역"],
+    "lifeAreas": [
+      "서면·전포 생활권",
+      "해운대·중동 생활권",
+      "센텀시티·우동 생활권",
+      "광안리·수영 생활권",
+      "부산역·초량 생활권",
+      "남포·광복 생활권",
+      "동래·온천장 생활권",
+      "연산·시청 생활권",
+      "사상·서부산 생활권",
+      "하단·사하 생활권",
+      "기장·해운대 동부 생활권"
+    ],
+    "contentFocus": "서면·해운대·센텀·동래·수영 중심의 도시철도 생활권",
+    "indexPriority": 1,
+    "contentStatus": "ready"
+  }
+]

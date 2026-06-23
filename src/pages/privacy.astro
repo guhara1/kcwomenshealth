@@ -1,0 +1,55 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import { SITE } from "../lib/site";
+
+const path = "/privacy/";
+const title = "개인정보 처리방침";
+const description =
+  "VIP 마사지 개인정보 처리방침. 예약 문의 시 수집하는 정보와 처리 기준을 안내합니다.";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  path={path}
+  noindex={true}
+>
+  <Breadcrumbs items={[{ name: "홈", path: "/" }, { name: "개인정보 처리방침" }]} />
+  <section class="section" style="padding-top:8px">
+    <div class="container prose">
+      <h1>개인정보 처리방침</h1>
+      <p>
+        {SITE.name}(이하 "사이트")는 이용자의 개인정보를 중요하게 생각하며,
+        관련 법령을 준수합니다. 본 방침은 예약 문의 과정에서 수집되는 정보와 그
+        처리 기준을 안내합니다.
+      </p>
+
+      <h2>1. 수집하는 정보</h2>
+      <p>
+        예약·문의 과정에서 연락처, 방문 희망 지역·주소, 희망 시간 등 예약에
+        필요한 최소한의 정보를 수집할 수 있습니다.
+      </p>
+
+      <h2>2. 이용 목적</h2>
+      <p>수집된 정보는 예약 상담과 방문 안내 목적으로만 이용됩니다.</p>
+
+      <h2>3. 보유 및 파기</h2>
+      <p>
+        수집된 정보는 이용 목적 달성 후 지체 없이 파기합니다. 관련 법령에 따라
+        보관이 필요한 경우 해당 기간 동안 안전하게 보관합니다.
+      </p>
+
+      <h2>4. 제3자 제공</h2>
+      <p>법령에 근거하거나 이용자 동의가 있는 경우를 제외하고 제공하지 않습니다.</p>
+
+      <h2>5. 문의</h2>
+      <p>
+        개인정보 관련 문의는 전화 <a href={SITE.phoneHref}>{SITE.phone}</a>로
+        연락 주시기 바랍니다.
+      </p>
+
+      <p class="muted">본 방침은 사이트 운영 상황에 따라 변경될 수 있습니다.</p>
+    </div>
+  </section>
+</BaseLayout>

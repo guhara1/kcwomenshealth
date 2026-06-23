@@ -1,0 +1,49 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import { sidos, stationsByGroup } from "../../lib/data";
+import { breadcrumbSchema } from "../../lib/seo";
+
+const title = "지하철역으로 찾기｜서울·경기·인천·부산 역세권 안내";
+const description =
+  "서울·경기·인천·부산 지하철역별 출장마사지·홈타이 생활권 안내. 가까운 역을 확인하세요.";
+const schema = [
+  breadcrumbSchema([
+    { name: "홈", path: "/" },
+    { name: "지하철역 안내", path: "/station/" },
+  ]),
+];
+---
+
+<BaseLayout title={title} description={description} path="/station/" schema={schema}>
+  <Breadcrumbs items={[{ name: "홈", path: "/" }, { name: "지하철역 안내" }]} />
+  <section class="section" style="padding-top:8px">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">가까운 역으로 찾기</span>
+        <h1 class="section__title">지하철역으로 찾기</h1>
+        <p class="section__lead">
+          현재 위치에서 가까운 지하철역을 기준으로 방문 가능 생활권을
+          확인하세요. 환승역도 역명 기준 하나의 안내 페이지로 제공합니다.
+        </p>
+      </div>
+
+      {
+        sidos.map((s) => (
+          <div style="margin-bottom:32px">
+            <h2 style="font-size:1.25rem">
+              <a href={`/station/${s.regionSlug}/`}>{s.regionName} 지하철역</a>
+            </h2>
+            <div class="chip-list">
+              {stationsByGroup(s.regionSlug).map((st) => (
+                <a class="chip" href={`/station/${st.stationGroup}/${st.stationSlug}/`}>
+                  {st.stationName}
+                </a>
+              ))}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>

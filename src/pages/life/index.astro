@@ -1,0 +1,48 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import { sidos } from "../../lib/data";
+import { breadcrumbSchema } from "../../lib/seo";
+
+const path = "/life/";
+const title = "생활권 안내｜서울·경기·인천·부산 인기 생활권";
+const description =
+  "서울·경기·인천·부산 인기 생활권 안내. 지역과 지하철역을 연결하는 생활권 허브입니다.";
+const schema = [
+  breadcrumbSchema([
+    { name: "홈", path: "/" },
+    { name: "생활권 안내", path },
+  ]),
+];
+---
+
+<BaseLayout title={title} description={description} path={path} schema={schema}>
+  <Breadcrumbs items={[{ name: "홈", path: "/" }, { name: "생활권 안내" }]} />
+  <section class="section" style="padding-top:8px">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">생활권 안내</span>
+        <h1 class="section__title">인기 생활권</h1>
+        <p class="section__lead">
+          생활권은 지역 페이지와 역 페이지를 연결하는 중간 허브입니다. 권역별
+          대표 생활권을 확인하세요.
+        </p>
+      </div>
+
+      {
+        sidos.map((s) => (
+          <div style="margin-bottom:28px">
+            <h2 style="font-size:1.25rem">
+              <a href={`/area/${s.regionSlug}/`}>{s.regionName}</a> 생활권
+            </h2>
+            <div class="chip-list">
+              {s.lifeAreas.map((l) => (
+                <a class="chip" href={`/area/${s.regionSlug}/`}>{l}</a>
+              ))}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>

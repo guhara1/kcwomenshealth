@@ -1,0 +1,146 @@
+/* ============================================================
+   디자인 토큰 — 프리미엄 팔레트
+   딥네이비 베이스 · 리파인드 슬레이트 그레이 · 포인트 블루
+   프리미엄 골드 액센트 · 오렌지 CTA
+   ============================================================ */
+:root {
+  /* ---- Brand / Navy (딥네이비) ---- */
+  --c-navy-950: #060d1c;
+  --c-navy-900: #0a1730;
+  --c-navy-800: #0f2042;
+  --c-navy-700: #16305f;
+  --c-navy-600: #1e3f7d;
+
+  /* ---- Point Blue (포인트 블루) ---- */
+  --c-blue-600: #1d4ed8;
+  --c-blue-500: #2f6bf2;
+  --c-blue-400: #4f86ff;
+  --c-blue-100: #e3edff;
+
+  /* ---- Premium Gold (프리미엄 액센트) ---- */
+  --c-gold-600: #b8902f;
+  --c-gold-500: #d4af37;
+  --c-gold-400: #e6c55c;
+  --c-gold-100: #f6edcf;
+
+  /* ---- Orange CTA (오렌지 계열) ---- */
+  --c-orange-600: #e0590b;
+  --c-orange-500: #f97316;
+  --c-orange-400: #fb923c;
+  --c-orange-100: #ffe7d2;
+
+  /* ---- Neutral / Slate Grey (라이트그레이) ---- */
+  --c-white: #ffffff;
+  --c-slate-50: #f7f9fc;
+  --c-slate-100: #eef2f8;
+  --c-slate-200: #e1e8f2;
+  --c-slate-300: #cbd5e6;
+  --c-slate-400: #94a3bd;
+  --c-slate-500: #64748b;
+  --c-slate-600: #475569;
+  --c-slate-700: #334155;
+  --c-slate-800: #1e293b;
+  --c-slate-900: #0f172a;
+
+  /* ---- Semantic tokens ---- */
+  --bg: var(--c-white);
+  --bg-soft: var(--c-slate-50);
+  --bg-muted: var(--c-slate-100);
+  --bg-inverse: var(--c-navy-900);
+
+  --surface: var(--c-white);
+  --surface-soft: var(--c-slate-50);
+  --border: var(--c-slate-200);
+  --border-strong: var(--c-slate-300);
+
+  --text: var(--c-slate-900);
+  --text-soft: var(--c-slate-600);
+  --text-muted: var(--c-slate-500);
+  --text-inverse: var(--c-white);
+  --text-on-navy: #d8e2f4;
+
+  --brand: var(--c-navy-900);
+  --accent: var(--c-blue-500);
+  --accent-strong: var(--c-blue-600);
+  --gold: var(--c-gold-500);
+  --cta: var(--c-orange-500);
+  --cta-strong: var(--c-orange-600);
+
+  /* ---- Premium overlays (컴포넌트 오버레이) ---- */
+  --grad-hero: radial-gradient(
+      120% 140% at 85% 0%,
+      rgba(47, 107, 242, 0.35) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      100% 120% at 0% 100%,
+      rgba(212, 175, 55, 0.18) 0%,
+      transparent 50%
+    ),
+    linear-gradient(160deg, var(--c-navy-950) 0%, var(--c-navy-800) 60%, var(--c-navy-700) 100%);
+  --grad-cta: linear-gradient(135deg, var(--c-orange-500) 0%, var(--c-orange-600) 100%);
+  --grad-gold: linear-gradient(135deg, var(--c-gold-400) 0%, var(--c-gold-600) 100%);
+  --grad-blue: linear-gradient(135deg, var(--c-blue-400) 0%, var(--c-blue-600) 100%);
+  --overlay-glass: rgba(255, 255, 255, 0.06);
+  --overlay-glass-border: rgba(255, 255, 255, 0.14);
+  --overlay-sheen: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+
+  /* ---- Elevation (shadow) ---- */
+  --shadow-xs: 0 1px 2px rgba(10, 23, 48, 0.06);
+  --shadow-sm: 0 2px 8px rgba(10, 23, 48, 0.08);
+  --shadow-md: 0 8px 24px rgba(10, 23, 48, 0.10);
+  --shadow-lg: 0 18px 48px rgba(10, 23, 48, 0.16);
+  --shadow-cta: 0 8px 22px rgba(249, 115, 22, 0.34);
+  --shadow-blue: 0 8px 22px rgba(47, 107, 242, 0.28);
+
+  /* ---- Radius ---- */
+  --r-xs: 6px;
+  --r-sm: 10px;
+  --r-md: 14px;
+  --r-lg: 20px;
+  --r-xl: 28px;
+  --r-full: 999px;
+
+  /* ---- Spacing scale ---- */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 64px;
+  --sp-9: 88px;
+
+  /* ---- Typography ---- */
+  --font-sans: "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, "Apple SD Gothic Neo",
+    "Noto Sans KR", sans-serif;
+
+  --fs-xs: 0.8125rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-md: 1.0625rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.5rem;
+  --fs-2xl: 1.875rem;
+  --fs-3xl: 2.375rem;
+  --fs-4xl: 3rem;
+
+  --lh-tight: 1.25;
+  --lh-snug: 1.45;
+  --lh-normal: 1.7;
+
+  /* ---- Layout ---- */
+  --container: 1140px;
+  --container-narrow: 820px;
+  --header-h: 64px;
+
+  /* ---- Motion ---- */
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --dur: 0.22s;
+}

@@ -1,0 +1,49 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import { sidos, sigungusBySido } from "../../lib/data";
+import { breadcrumbSchema } from "../../lib/seo";
+
+const title = "지역으로 찾기｜서울·경기·인천·부산 지역 안내";
+const description =
+  "서울·경기·인천·부산 출장마사지·홈타이 지역 안내. 권역별 구·시·군 생활권을 확인하세요.";
+const schema = [
+  breadcrumbSchema([
+    { name: "홈", path: "/" },
+    { name: "지역 안내", path: "/area/" },
+  ]),
+];
+---
+
+<BaseLayout title={title} description={description} path="/area/" schema={schema}>
+  <Breadcrumbs items={[{ name: "홈", path: "/" }, { name: "지역 안내" }]} />
+  <section class="section" style="padding-top:8px">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">지역으로 찾기</span>
+        <h1 class="section__title">서울·경기·인천·부산 지역 안내</h1>
+        <p class="section__lead">
+          권역을 선택하면 구·시·군별 생활권과 대표 역세권 안내로 이동합니다.
+        </p>
+      </div>
+
+      {
+        sidos.map((s) => (
+          <div style="margin-bottom:32px">
+            <h2 style="font-size:1.25rem;display:flex;gap:10px;align-items:baseline">
+              <a href={`/area/${s.regionSlug}/`}>{s.regionName}</a>
+              <span class="muted" style="font-size:0.9rem;font-weight:500">{s.contentFocus}</span>
+            </h2>
+            <div class="chip-list">
+              {sigungusBySido(s.regionSlug).map((g) => (
+                <a class="chip" href={`/area/${s.regionSlug}/${g.regionSlug}/`}>
+                  {g.regionName}
+                </a>
+              ))}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>

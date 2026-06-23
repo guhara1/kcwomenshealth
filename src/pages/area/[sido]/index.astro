@@ -1,0 +1,179 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import { SITE, TELEGRAM } from "../../../lib/site";
+import {
+  sidos,
+  sigungusBySido,
+  stationsByGroup,
+  prioritySigungus,
+} from "../../../lib/data";
+import {
+  breadcrumbSchema,
+  faqSchema,
+  serviceAreaSchema,
+} from "../../../lib/seo";
+
+export function getStaticPaths() {
+  return sidos.map((s) => ({ params: { sido: s.regionSlug }, props: { s } }));
+}
+
+const { s } = Astro.props;
+const path = `/area/${s.regionSlug}/`;
+const gus = sigungusBySido(s.regionSlug);
+const priority = prioritySigungus(s.regionSlug);
+const stations = stationsByGroup(s.regionSlug).slice(0, 12);
+
+const titleMap: Record<string, string> = {
+  seoul: "서울 출장마사지｜강남·잠실·홍대·여의도 홈타이 지역 안내",
+  gyeonggi: "경기도 출장마사지｜수원·성남·고양·김포 홈타이 지역 안내",
+  incheon: "인천 출장마사지｜부평·송도·구월·검단 홈타이 지역 안내",
+  busan: "부산 출장마사지｜서면·해운대·센텀·동래 홈타이 지역 안내",
+};
+const descMap: Record<string, string> = {
+  seoul: "서울 출장마사지 예약 전 강남·잠실·홍대·여의도·신림 생활권을 확인하세요.",
+  gyeonggi: "경기도 출장마사지 예약 전 수원·성남·고양·김포·시흥 생활권을 확인하세요.",
+  incheon: "인천 출장마사지 예약 전 부평·송도·구월동·검단·청라 생활권을 확인하세요.",
+  busan: "부산 출장마사지 예약 전 서면·해운대·센텀·동래·수영 생활권을 확인하세요.",
+};
+
+const title = titleMap[s.regionSlug];
+const description = descMap[s.regionSlug];
+
+const faq = [
+  {
+    q: `${s.regionName}에서 출장마사지·홈타이는 어떻게 예약하나요?`,
+    a: `전화예약 ${SITE.phone} 또는 텔레그램으로 방문 위치와 가능 주소, 희망 시간을 알려주시면 ${s.regionName} 방문 가능 생활권과 추가 이동비 기준을 안내드립니다.`,
+  },
+  {
+    q: `${s.regionName} 어느 지역까지 방문하나요?`,
+    a: `${s.regionName} 주요 구·시·군과 대표 역세권 생활권을 중심으로 안내합니다. 각 지역 페이지에서 방문 가능 생활권과 인접 역을 확인할 수 있습니다.`,
+  },
+];
+
+const schema = [
+  breadcrumbSchema([
+    { name: "홈", path: "/" },
+    { name: "지역 안내", path: "/area/" },
+    { name: s.regionName, path },
+  ]),
+  serviceAreaSchema(`${s.sido} 출장마사지·홈타이`, path),
+  faqSchema(faq),
+];
+---
+
+<BaseLayout title={title} description={description} path={path} schema={schema}>
+  <Breadcrumbs
+    items={[
+      { name: "홈", path: "/" },
+      { name: "지역 안내", path: "/area/" },
+      { name: s.regionName },
+    ]}
+  />
+
+  <section class="section" style="padding-top:8px">
+    <div class="container">
+      <div class="section__head">
+        <span class="eyebrow">{s.regionName} 지역 안내</span>
+        <h1 class="section__title">
+          {s.regionName} 출장마사지 · 지역별 지하철역별 홈타이 안내
+        </h1>
+        <p class="section__lead">{s.contentFocus}</p>
+      </div>
+
+      <h2 style="font-size:1.25rem">{s.regionName} 주요 지역</h2>
+      <div class="chip-list" style="margin-bottom:28px">
+        {
+          gus.map((g) => (
+            <a class="chip" href={`/area/${s.regionSlug}/${g.regionSlug}/`}>
+              {g.regionName}
+            </a>
+          ))
+        }
+      </div>
+
+      <h2 style="font-size:1.25rem">{s.regionName} 대표 지하철역</h2>
+      <div class="chip-list" style="margin-bottom:8px">
+        {
+          stations.map((st) => (
+            <a class="chip chip--soft" href={`/station/${st.stationGroup}/${st.stationSlug}/`}>
+              {st.stationName}
+            </a>
+          ))
+        }
+      </div>
+      <p>
+        <a href={`/station/${s.regionSlug}/`} style="font-weight:700">
+          {s.regionName} 지하철역 전체 보기 →
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="container prose">
+      <h2>{s.regionName}에서 출장마사지를 찾을 때 확인할 기준</h2>
+      <p>
+        {s.regionName} 출장마사지와 홈타이를 찾을 때는 현재 위치한 구·시·군과
+        가까운 지하철역을 함께 확인하는 것이 좋습니다. {s.contentFocus}을 중심으로,
+        방문 위치(자택·호텔·오피스텔)에 따라 예약 가능 시간과 추가 이동비 기준이
+        달라질 수 있습니다.
+      </p>
+
+      <h2>{s.regionName} 주요 생활권 안내</h2>
+      <p>아래 생활권을 기준으로 방문 가능 지역과 인접 역을 확인할 수 있습니다.</p>
+      <ul>
+        {s.lifeAreas.map((l) => <li>{l}</li>)}
+      </ul>
+
+      <h2>{s.regionName} 1차 안내 지역</h2>
+      <p>
+        먼저 안내가 준비된 {s.regionName} 주요 구·시는 다음과 같습니다. 각 지역
+        페이지에서 대표 생활권과 인접 역, 이용 전 확인사항을 확인하세요.
+      </p>
+      <div class="chip-list">
+        {
+          priority.map((g) => (
+            <a class="chip" href={`/area/${s.regionSlug}/${g.regionSlug}/`}>{g.regionName}</a>
+          ))
+        }
+      </div>
+
+      <h2>자택·숙소·오피스텔 이용 전 확인사항</h2>
+      <p>
+        방문 위치에 따라 출입 방법과 주소 확인 기준이 다릅니다. 예약 전
+        <a href="/guide/before-use/">이용 전 확인사항</a>과
+        <a href="/reservation/">예약 안내</a>를 함께 확인하시면 방문이 원활합니다.
+      </p>
+
+      <div class="notice notice--warn">
+        <div class="notice__title">예약 안내</div>
+        <p style="margin:0">
+          전화예약 <a href={SITE.phoneHref}>{SITE.phone}</a> · 텔레그램
+          <a href={TELEGRAM.reservation} target="_blank" rel="noopener nofollow">문의하기</a>.
+          본 사이트는 정보형 안내 페이지이며 불법·선정적 서비스는 제공하지
+          않습니다.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <div class="section__head">
+        <span class="eyebrow">자주 묻는 질문</span>
+        <h2 class="section__title">{s.regionName} 예약 전 자주 묻는 질문</h2>
+      </div>
+      <div class="faq">
+        {
+          faq.map((f) => (
+            <details>
+              <summary>{f.q}</summary>
+              <p>{f.a}</p>
+            </details>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>
