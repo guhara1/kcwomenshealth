@@ -1,0 +1,47 @@
+---
+import pricing from "../data/pricing.json";
+import { SITE, TELEGRAM } from "../lib/site";
+
+interface Props {
+  /** 표 상단에 지역명을 붙이고 싶을 때 (예: "강남") */
+  areaLabel?: string;
+}
+const { areaLabel } = Astro.props;
+const heading = areaLabel ? `${areaLabel} ${pricing.heading}` : pricing.heading;
+---
+
+<section class="section section--dark price">
+  <div class="container">
+    <div class="price__head">
+      <h2 class="price__title">{heading}</h2>
+      <p class="price__sub">{pricing.subheading}</p>
+    </div>
+
+    <div class="price__grid">
+      {
+        pricing.courses.map((c) => (
+          <div class:list={["price-card", { "is-rec": c.recommended }]}>
+            {c.recommended && <span class="price-card__badge">추천</span>}
+            <div class="price-card__name">{c.name}</div>
+            <div class="price-card__price">
+              {c.price}<small>원</small>
+            </div>
+            <div class="price-card__dur">{c.duration}</div>
+            <p class="price-card__desc">{c.desc}</p>
+            <a
+              class:list={["btn", c.recommended ? "btn--gold" : "btn--line", "price-card__btn"]}
+              href={SITE.phoneHref}
+            >
+              예약 문의
+            </a>
+          </div>
+        ))
+      }
+    </div>
+
+    <p class="price__note">
+      {pricing.note}
+      <a href="/reservation/">요금·예약 기준 자세히 보기 →</a>
+    </p>
+  </div>
+</section>

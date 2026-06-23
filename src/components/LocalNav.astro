@@ -1,0 +1,23 @@
+---
+// 지역 페이지 공통 메뉴 (강남 샘플 구조 그대로 적용)
+// 홈 | 지역별 안내 | 역세권 안내 | 생활권 안내 | 예약 안내 | 이용 전 확인사항 | 고객센터
+interface Props {
+  homeLabel: string;
+  homeHref: string;
+  showLife?: boolean;
+}
+const { homeLabel, homeHref, showLife = true } = Astro.props;
+---
+
+<nav class="local-nav" aria-label={`${homeLabel} 메뉴`}>
+  <div class="container local-nav__inner">
+    <a class="local-nav__home" href={homeHref}>{homeLabel} 홈</a>
+    <a href="#areas">지역별 안내</a>
+    <a href="#stations">역세권 안내</a>
+    {showLife && <a href="#life">생활권 안내</a>}
+    <a href="/reservation/">예약 안내</a>
+    <a href="/guide/before-use/">이용 전 확인사항</a>
+    <a href="/service/hometai/">홈타이 가이드</a>
+    <a href="/contact/">고객센터</a>
+  </div>
+</nav>

@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import Breadcrumbs from "../../../components/Breadcrumbs.astro";
+import LocalNav from "../../../components/LocalNav.astro";
+import PriceTable from "../../../components/PriceTable.astro";
 import { SITE, TELEGRAM } from "../../../lib/site";
 import {
   sidos,
@@ -63,6 +65,7 @@ const schema = [
 ---
 
 <BaseLayout title={title} description={description} path={path} schema={schema}>
+  <LocalNav homeLabel={s.regionName} homeHref={path} />
   <Breadcrumbs
     items={[
       { name: "홈", path: "/" },
@@ -71,7 +74,7 @@ const schema = [
     ]}
   />
 
-  <section class="section" style="padding-top:8px">
+  <section class="section section-anchor" id="areas" style="padding-top:8px">
     <div class="container">
       <div class="section__head">
         <span class="eyebrow">{s.regionName} 지역 안내</span>
@@ -92,7 +95,7 @@ const schema = [
         }
       </div>
 
-      <h2 style="font-size:1.25rem">{s.regionName} 대표 지하철역</h2>
+      <h2 id="stations" class="section-anchor" style="font-size:1.25rem">{s.regionName} 대표 지하철역</h2>
       <div class="chip-list" style="margin-bottom:8px">
         {
           stations.map((st) => (
@@ -110,6 +113,9 @@ const schema = [
     </div>
   </section>
 
+  <!-- 요금표 (메인 + 모든 지역 페이지 공통) -->
+  <PriceTable areaLabel={s.regionName} />
+
   <section class="section section--soft">
     <div class="container prose">
       <h2>{s.regionName}에서 출장마사지를 찾을 때 확인할 기준</h2>
@@ -120,7 +126,7 @@ const schema = [
         달라질 수 있습니다.
       </p>
 
-      <h2>{s.regionName} 주요 생활권 안내</h2>
+      <h2 id="life" class="section-anchor">{s.regionName} 주요 생활권 안내</h2>
       <p>아래 생활권을 기준으로 방문 가능 지역과 인접 역을 확인할 수 있습니다.</p>
       <ul>
         {s.lifeAreas.map((l) => <li>{l}</li>)}

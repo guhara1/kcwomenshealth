@@ -815,3 +815,225 @@ ol {
   overflow: hidden;
   clip: rect(0 0 0 0);
 }
+
+/* ============================================================
+   Pricing (다크 요금표) — 메인 + 모든 지역 페이지 공통
+   ============================================================ */
+.section--dark {
+  position: relative;
+  color: #eaf1ff;
+  background:
+    radial-gradient(60% 80% at 85% 0%, rgba(47, 107, 242, 0.22) 0%, transparent 55%),
+    radial-gradient(50% 70% at 5% 100%, rgba(212, 175, 55, 0.10) 0%, transparent 55%),
+    linear-gradient(180deg, #071227 0%, #0a1a38 100%);
+}
+.price__head {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto var(--sp-6);
+}
+.price__title {
+  color: #fff;
+  font-size: var(--fs-2xl);
+}
+.price__sub {
+  color: #b8cdf2;
+  font-size: var(--fs-md);
+  margin: 0;
+}
+.price__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-4);
+  align-items: stretch;
+}
+@media (max-width: 760px) {
+  .price__grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin-inline: auto;
+  }
+}
+.price-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--sp-6) var(--sp-5) var(--sp-5);
+  border-radius: var(--r-lg);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(120, 160, 255, 0.16);
+  backdrop-filter: blur(4px);
+}
+.price-card.is-rec {
+  background: linear-gradient(180deg, rgba(47, 107, 242, 0.12), rgba(10, 26, 56, 0.2));
+  border-color: rgba(230, 197, 92, 0.7);
+  box-shadow: 0 18px 48px rgba(212, 175, 55, 0.16),
+    inset 0 0 0 1px rgba(230, 197, 92, 0.25);
+}
+.price-card.is-rec::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  border-radius: var(--r-lg) var(--r-lg) 0 0;
+  background: var(--grad-gold);
+}
+.price-card__badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 18px;
+  border-radius: var(--r-full);
+  background: var(--grad-gold);
+  color: var(--c-navy-900);
+  font-size: var(--fs-xs);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  box-shadow: 0 6px 16px rgba(212, 175, 55, 0.4);
+}
+.price-card__name {
+  font-size: var(--fs-lg);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: var(--sp-3);
+}
+.price-card__price {
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.price-card.is-rec .price-card__price {
+  color: #f4d77a;
+}
+.price-card__price small {
+  font-size: var(--fs-base);
+  font-weight: 700;
+  margin-left: 3px;
+  color: #b8cdf2;
+}
+.price-card__dur {
+  margin-top: var(--sp-3);
+  font-weight: 800;
+  color: #d4af37;
+  font-size: var(--fs-sm);
+}
+.price-card__desc {
+  color: #b8cdf2;
+  font-size: var(--fs-sm);
+  margin: var(--sp-2) 0 var(--sp-5);
+  flex: 1;
+}
+.price-card__btn {
+  width: 100%;
+}
+.section--dark .btn--line {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(120, 160, 255, 0.45);
+  color: #cfe0ff;
+}
+.section--dark .btn--line:hover {
+  border-color: var(--c-blue-400);
+  color: #fff;
+  background: rgba(47, 107, 242, 0.15);
+}
+.price__note {
+  text-align: center;
+  color: #9db3d8;
+  font-size: var(--fs-sm);
+  margin: var(--sp-6) 0 0;
+}
+.price__note a {
+  color: #6ea2ff;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ============================================================
+   Local Nav (지역 페이지 공통 메뉴 — 강남 샘플 구조)
+   ============================================================ */
+.local-nav {
+  position: sticky;
+  top: var(--header-h);
+  z-index: 40;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: saturate(160%) blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+.local-nav__inner {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 52px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.local-nav__inner::-webkit-scrollbar {
+  display: none;
+}
+.local-nav__home {
+  font-weight: 800;
+  color: var(--brand);
+  white-space: nowrap;
+  padding-right: var(--sp-3);
+  margin-right: var(--sp-2);
+  border-right: 1px solid var(--border);
+}
+.local-nav__home:hover {
+  text-decoration: none;
+}
+.local-nav a:not(.local-nav__home) {
+  white-space: nowrap;
+  padding: 8px 12px;
+  border-radius: var(--r-full);
+  color: var(--text-soft);
+  font-weight: 600;
+  font-size: var(--fs-sm);
+}
+.local-nav a:not(.local-nav__home):hover {
+  background: var(--c-blue-100);
+  color: var(--accent-strong);
+  text-decoration: none;
+}
+
+/* 행정동 / 역세권 / 생활권 리스트 섹션 */
+.area-rows {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-3);
+  margin-block: var(--sp-4);
+}
+@media (max-width: 640px) {
+  .area-rows {
+    grid-template-columns: 1fr;
+  }
+}
+.area-row {
+  scroll-margin-top: 130px;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: var(--sp-4);
+  background: var(--surface);
+  transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+.area-row:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-xs);
+}
+.area-row b {
+  display: block;
+  color: var(--text);
+  font-size: var(--fs-base);
+  margin-bottom: 4px;
+}
+.area-row span {
+  color: var(--text-soft);
+  font-size: var(--fs-sm);
+}
+.section-anchor {
+  scroll-margin-top: 130px;
+}

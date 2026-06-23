@@ -2,6 +2,7 @@ import sidoData from "../data/regions/sido.json";
 import sigunguData from "../data/regions/sigungu.json";
 import stationData from "../data/stations/stations.json";
 import serviceData from "../data/services.json";
+import dongData from "../data/regions/dong.json";
 
 export interface Sido {
   regionName: string;
@@ -53,10 +54,26 @@ export interface Service {
   points: string[];
 }
 
+export interface Dong {
+  name: string;
+  slug: string;
+  blurb: string;
+}
+
 export const sidos = sidoData as Sido[];
 export const sigungus = sigunguData as Sigungu[];
 export const stations = stationData as Station[];
 export const services = serviceData as Service[];
+const dongs = dongData as Record<string, Dong[]>;
+
+/** 자치구의 대표 행정동 목록 (ㄱㄴㄷ 정렬). 데이터 없으면 nearbyAreas 기반 폴백 */
+export const dongsOf = (guSlug: string): Dong[] => {
+  const list = dongs[guSlug];
+  if (list && list.length) {
+    return [...list].sort((a, b) => a.name.localeCompare(b.name, "ko"));
+  }
+  return [];
+};
 
 /** contentStatus 가 색인 가능한 상태인지 */
 export const isIndexable = (status: string) => status === "ready";
