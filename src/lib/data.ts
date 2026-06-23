@@ -103,8 +103,26 @@ export const hasDongDetail = (
 
 export const sidos = sidoData as Sido[];
 export const sigungus = sigunguData as Sigungu[];
-export const stations = stationData as Station[];
 export const services = serviceData as Service[];
+
+// 기본 역 + 추가 역(extra-*.json) 병합, group+slug 중복 제거(기존 우선)
+const extraStationModules = import.meta.glob<{ default: Station[] }>(
+  "../data/stations/extra-*.json",
+  { eager: true }
+);
+const _stations: Station[] = [...(stationData as Station[])];
+const _seen = new Set(_stations.map((s) => `${s.stationGroup}/${s.stationSlug}`));
+for (const mod of Object.values(extraStationModules)) {
+  const arr = ((mod as any).default ?? mod) as Station[];
+  for (const s of arr) {
+    const key = `${s.stationGroup}/${s.stationSlug}`;
+    if (!_seen.has(key)) {
+      _seen.add(key);
+      _stations.push(s);
+    }
+  }
+}
+export const stations = _stations;
 const dongs = dongData as Record<string, Dong[]>;
 
 /** 자치구의 대표 행정동 목록 (ㄱㄴㄷ 정렬). 시·도 단위로 구분한다. */
@@ -195,6 +213,50 @@ export const nearbyStationsOf = (station: Station, n = 4) =>
         s.stationSlug !== station.stationSlug
     )
     .slice(0, n);
+
+export const stationByName = (name: string) =>
+  stations.find((s) => s.stationName === name);
+
+// ─────────────────────────────────────────────────────────────
+// 생활권(life-area) — 지역↔역 중간 허브
+// ─────────────────────────────────────────────────────────────
+export interface LifeArea {
+  name: string;
+  slug: string;
+  sidoSlug: string;
+  memberAreas: string[];
+  memberStations: string[];
+  p1: string;
+  p2: string;
+}
+
+const lifeModules = import.meta.glob<{ default: any[] }>(
+  "../data/life/*.json",
+  { eager: true }
+);
+const lifeAreasAll: LifeArea[] = [];
+for (const [filePath, mod] of Object.entries(lifeModules)) {
+  const sidoSlug = filePath.split("/").pop()!.replace(".json", "");
+  const arr = ((mod as any).default ?? mod) as Omit<LifeArea, "sidoSlug">[];
+  for (const la of arr) lifeAreasAll.push({ ...la, sidoSlug });
+}
+
+export const lifeAreas = lifeAreasAll;
+export const lifeAreasOfSido = (sidoSlug: string) =>
+  lifeAreasAll.filter((l) => l.sidoSlug === sidoSlug);
+export const getLifeArea = (sidoSlug: string, slug: string) =>
+  lifeAreasAll.find((l) => l.sidoSlug === sidoSlug && l.slug === slug);
+
+/** 행정동 이름으로 동 상세 페이지 경로 찾기 (해당 권역에서) */
+export const dongPathByName = (sidoSlug: string, name: string): string | null => {
+  for (const gu of sigungus.filter((s) => s.parentSlug === sidoSlug)) {
+    const d = dongsOf(sidoSlug, gu.regionSlug).find((x) => x.name === name);
+    if (d && hasDongDetail(sidoSlug, gu.regionSlug, d.slug)) {
+      return `/area/${sidoSlug}/${gu.regionSlug}/${d.slug}/`;
+    }
+  }
+  return null;
+};
 
 /** 1차 우선 시군구 */
 export const prioritySigungus = (sidoSlug: string) =>
