@@ -3,7 +3,7 @@ import BaseLayout from "../../../../layouts/BaseLayout.astro";
 import Breadcrumbs from "../../../../components/Breadcrumbs.astro";
 import LocalNav from "../../../../components/LocalNav.astro";
 import PriceTable from "../../../../components/PriceTable.astro";
-import { SITE, TELEGRAM, sidoName } from "../../../../lib/site";
+import { SITE, sidoName } from "../../../../lib/site";
 import {
   allDetailDongs,
   getSido,
@@ -60,7 +60,7 @@ const description = `${dong.name} 출장마사지 예약 전 ${detail.adjacentAr
 const faq = [
   {
     q: `${dong.name} 출장마사지·홈타이는 어떻게 예약하나요?`,
-    a: `전화예약 ${SITE.phone} 또는 텔레그램으로 ${dong.name} 내 방문 위치와 가능 주소, 희망 시간을 알려주시면 ${detail.nearbyStations.join(", ")} 인근 방문 가능 생활권과 추가 이동비 기준을 안내드립니다.`,
+    a: `전화예약 ${SITE.phone}로 ${dong.name} 내 방문 위치와 가능 주소, 희망 시간을 알려주시면 ${detail.nearbyStations.join(", ")} 인근 방문 가능 생활권과 추가 이동비 기준을 안내드립니다.`,
   },
   {
     q: `${dong.name}은 ${gu.regionName} 어느 생활권에 속하나요?`,
@@ -103,7 +103,6 @@ const schema = [
       </p>
       <div class="hero__cta" style="margin-top:18px">
         <a class="btn btn--cta" href={SITE.phoneHref}>전화예약 {SITE.phone}</a>
-        <a class="btn btn--blue" href={TELEGRAM.reservation} target="_blank" rel="noopener nofollow">문자 문의</a>
         <a class="btn btn--outline" href={guPath}>{gu.regionName} 전체</a>
       </div>
 
@@ -184,7 +183,7 @@ const schema = [
       <h2>{dong.name} 예약 전 확인사항</h2>
       <p>{detail.p3}</p>
       <p>
-        {dong.name} 방문 예약은 전화 {SITE.phone} 또는 텔레그램으로 받으며,
+        {dong.name} 방문 예약은 전화 {SITE.phone}로 받으며,
         {sts[0]} 기준 방문 동선과 {adj[0]} 인접 지역 이동 여부를 함께 확인하면
         예약이 빠릅니다. {gu.regionName} {dong.name}은 {detail.character} 특성을
         고려해 방문 가능 시간과 추가 이동비 기준을 예약 시 안내합니다.
@@ -210,8 +209,7 @@ const schema = [
       <div class="notice notice--warn">
         <div class="notice__title">예약 안내</div>
         <p style="margin:0">
-          전화예약 <a href={SITE.phoneHref}>{SITE.phone}</a> · 텔레그램
-          <a href={TELEGRAM.reservation} target="_blank" rel="noopener nofollow">문의하기</a>.
+          전화예약 <a href={SITE.phoneHref}>{SITE.phone}</a> 로 문의해 주세요.
           {dong.name} 안내는 정보형이며 허위 후기·선정적 표현을 사용하지 않습니다.
         </p>
       </div>

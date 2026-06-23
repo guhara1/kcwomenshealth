@@ -3,7 +3,7 @@ import BaseLayout from "../../../layouts/BaseLayout.astro";
 import Breadcrumbs from "../../../components/Breadcrumbs.astro";
 import LocalNav from "../../../components/LocalNav.astro";
 import PriceTable from "../../../components/PriceTable.astro";
-import { SITE, TELEGRAM, sidoName } from "../../../lib/site";
+import { SITE, sidoName } from "../../../lib/site";
 import {
   sigungus,
   getSido,
@@ -64,7 +64,7 @@ const description = `${g.regionName} 출장마사지 예약 전 ${g.nearbyAreas
 const faq = [
   {
     q: `${g.regionName} 출장마사지·홈타이는 어떻게 예약하나요?`,
-    a: `전화예약 ${SITE.phone} 또는 텔레그램으로 ${g.regionName} 내 방문 위치와 가능 주소, 희망 시간을 알려주시면 방문 가능 생활권과 추가 이동비 기준을 안내드립니다.`,
+    a: `전화예약 ${SITE.phone}로 ${g.regionName} 내 방문 위치와 가능 주소, 희망 시간을 알려주시면 방문 가능 생활권과 추가 이동비 기준을 안내드립니다.`,
   },
   {
     q: `${g.regionName} 기본 요금은 어떻게 되나요?`,
@@ -72,7 +72,7 @@ const faq = [
   },
   {
     q: `${g.regionName} 추가 이동비 기준이 궁금합니다.`,
-    a: `지역과 시간대, 거리에 따라 추가 이동비가 발생할 수 있습니다. 예약 전 텔레그램 또는 전화로 정확한 기준을 확인하실 수 있습니다.`,
+    a: `지역과 시간대, 거리에 따라 추가 이동비가 발생할 수 있습니다. 예약 전 전화로 정확한 기준을 확인하실 수 있습니다.`,
   },
 ];
 
@@ -289,8 +289,7 @@ const schema = noindex
       <div class="notice notice--warn">
         <div class="notice__title">예약 안내</div>
         <p style="margin:0">
-          전화예약 <a href={SITE.phoneHref}>{SITE.phone}</a> · 텔레그램
-          <a href={TELEGRAM.reservation} target="_blank" rel="noopener nofollow">문의하기</a>.
+          전화예약 <a href={SITE.phoneHref}>{SITE.phone}</a> 로 문의해 주세요.
           허위 후기·선정적 표현 없이 정보형으로 안내합니다.
         </p>
       </div>

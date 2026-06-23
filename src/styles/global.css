@@ -250,37 +250,71 @@ ol {
   margin-top: var(--sp-3);
 }
 
-/* 칩 형태의 지역/역 버튼 */
+/* 칩 형태의 지역/역 버튼 — 시인성 강화(크고 또렷한 알약 버튼) */
 .chip-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
 }
 .chip {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 9px 16px;
+  gap: 7px;
+  min-height: 46px;
+  padding: 12px 22px;
   border-radius: var(--r-full);
-  background: var(--surface);
-  border: 1px solid var(--border-strong);
-  color: var(--text);
-  font-weight: 600;
-  font-size: var(--fs-sm);
-  transition: all var(--dur) var(--ease);
+  background: var(--c-white);
+  border: 2px solid var(--c-blue-400);
+  color: var(--accent-strong);
+  font-weight: 800;
+  font-size: var(--fs-md);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  box-shadow: 0 2px 6px rgba(47, 107, 242, 0.12);
+  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease),
+    background var(--dur) var(--ease), border-color var(--dur) var(--ease),
+    color var(--dur) var(--ease);
+}
+.chip::after {
+  content: "›";
+  font-size: 1.05em;
+  font-weight: 700;
+  color: var(--accent);
+  transition: transform var(--dur) var(--ease), color var(--dur) var(--ease);
 }
 .chip:hover {
+  background: var(--grad-blue);
+  border-color: transparent;
+  color: #fff;
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-blue);
+}
+.chip:hover::after {
+  color: #fff;
+  transform: translateX(3px);
+}
+/* 보조 칩(랜드마크·인접 정보 등) — 화살표 없이 중립 톤이지만 또렷하게 */
+.chip--soft {
+  background: var(--c-slate-50);
+  border: 2px solid var(--border-strong);
+  color: var(--text);
+  font-weight: 700;
+}
+.chip--soft::after {
+  content: none;
+}
+.chip--soft:hover {
   background: var(--c-blue-100);
   border-color: var(--accent);
   color: var(--accent-strong);
-  text-decoration: none;
-  transform: translateY(-1px);
 }
-.chip--soft {
-  background: var(--bg-muted);
-  border-color: transparent;
-  color: var(--text-soft);
-  font-weight: 500;
+@media (max-width: 560px) {
+  .chip {
+    font-size: var(--fs-base);
+    padding: 11px 18px;
+    min-height: 44px;
+  }
 }
 .tag {
   display: inline-block;

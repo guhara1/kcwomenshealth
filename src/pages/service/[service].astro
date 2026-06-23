@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Breadcrumbs from "../../components/Breadcrumbs.astro";
-import { SITE, TELEGRAM } from "../../lib/site";
+import { SITE } from "../../lib/site";
 import { services } from "../../lib/data";
 import { breadcrumbSchema, faqSchema, absoluteUrl } from "../../lib/seo";
 
@@ -19,7 +19,7 @@ const description = sv.summary;
 const faq = [
   {
     q: `${sv.shortName} 관리는 어떻게 예약하나요?`,
-    a: `전화예약 ${SITE.phone} 또는 텔레그램으로 방문 위치와 가능 주소, 희망 시간을 알려주시면 안내드립니다.`,
+    a: `전화예약 ${SITE.phone}로 방문 위치와 가능 주소, 희망 시간을 알려주시면 안내드립니다.`,
   },
 ];
 
@@ -86,8 +86,7 @@ const schema = [
       <div class="notice notice--warn">
         <div class="notice__title">예약 안내</div>
         <p style="margin:0">
-          전화예약 <a href={SITE.phoneHref}>{SITE.phone}</a> · 텔레그램
-          <a href={TELEGRAM.reservation} target="_blank" rel="noopener nofollow">문의하기</a>.
+          전화예약 <a href={SITE.phoneHref}>{SITE.phone}</a> 로 문의해 주세요.
           본 안내는 관리 방식과 예약 기준 중심이며, 불법·선정적 서비스는 제공하지
           않습니다.
         </p>

@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PriceTable from "../components/PriceTable.astro";
-import { SITE, TELEGRAM } from "../lib/site";
+import { SITE } from "../lib/site";
 import { sidos, services, prioritySigungus, stationsByGroup } from "../lib/data";
 import { breadcrumbSchema, faqSchema } from "../lib/seo";
 
@@ -13,7 +13,7 @@ const description =
 const faq = [
   {
     q: "출장마사지와 홈타이는 어떻게 예약하나요?",
-    a: "전화예약 0508-202-4719 또는 텔레그램으로 위치(자택·호텔·오피스텔)와 방문 가능 주소, 희망 시간을 알려주시면 방문 가능 지역과 추가 이동비 기준을 안내드립니다.",
+    a: "전화예약 0508-202-4719로 위치(자택·호텔·오피스텔)와 방문 가능 주소, 희망 시간을 알려주시면 방문 가능 지역과 추가 이동비 기준을 안내드립니다.",
   },
   {
     q: "어느 지역까지 방문이 가능한가요?",
@@ -21,7 +21,7 @@ const faq = [
   },
   {
     q: "추가 이동비는 어떻게 확인하나요?",
-    a: "지역과 시간대, 거리 조건에 따라 추가 이동비가 발생할 수 있습니다. 예약 전 텔레그램 또는 전화로 정확한 기준을 안내받으실 수 있습니다.",
+    a: "지역과 시간대, 거리 조건에 따라 추가 이동비가 발생할 수 있습니다. 예약 전 전화로 정확한 기준을 안내받으실 수 있습니다.",
   },
 ];
 
@@ -55,12 +55,8 @@ const lifeAreas = sidos.flatMap((s) =>
       </ul>
       <div class="hero__cta">
         <a class="btn btn--cta" href={SITE.phoneHref}>전화예약 {SITE.phone}</a>
-        <a
-          class="btn btn--line"
-          href={TELEGRAM.reservation}
-          target="_blank"
-          rel="noopener nofollow">문자 문의</a>
         <a class="btn btn--line" href="/area/">지역으로 찾기</a>
+        <a class="btn btn--line" href="/station/">역으로 찾기</a>
       </div>
       <div class="hero__stats">
         <div><b>4</b><span>서울·경기·인천·부산</span></div>
@@ -264,14 +260,14 @@ const lifeAreas = sidos.flatMap((s) =>
       <h2>예약 문의 전 확인할 정보</h2>
       <p>
         예약 전에는 방문 위치, 희망 시간, 방문 가능 주소, 추가 이동비 기준을
-        확인합니다. 전화예약 <a href={SITE.phoneHref}>{SITE.phone}</a> 또는
-        텔레그램으로 문의하시면 빠르게 안내드립니다. 본 사이트는 정보형 안내
+        확인합니다. 전화예약 <a href={SITE.phoneHref}>{SITE.phone}</a>로
+        문의하시면 빠르게 안내드립니다. 본 사이트는 정보형 안내
         페이지이며, 불법·선정적 서비스는 제공하지 않습니다.
       </p>
 
       <div class="hero__cta" style="margin-top:24px">
         <a class="btn btn--cta" href={SITE.phoneHref}>전화예약 {SITE.phone}</a>
-        <a class="btn btn--blue" href={TELEGRAM.reservation} target="_blank" rel="noopener nofollow">텔레그램 문의</a>
+        <a class="btn btn--outline" href="/reservation/">예약 안내 보기</a>
       </div>
     </div>
   </section>

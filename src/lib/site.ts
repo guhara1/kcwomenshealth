@@ -26,16 +26,14 @@ export const SITE = {
 } as const;
 
 // ─────────────────────────────────────────────────────────────
-// 텔레그램 링크
-//  ⚠️ 아래 핸들(@vip_massage)을 실제 텔레그램 채널/계정으로 교체하세요.
+// 텔레그램 링크 (제작·광고 문의 전용 — 푸터에서만 사용)
+//  ⚠️ webBuild 핸들은 실제 텔레그램 계정으로 교체하세요.
 // ─────────────────────────────────────────────────────────────
 export const TELEGRAM = {
-  /** 예약/상담 텔레그램 */
-  reservation: "https://t.me/vip_massage",
   /** 웹사이트 제작 문의 텔레그램 */
   webBuild: "https://t.me/vip_massage_build",
-  /** 제휴 문의 텔레그램 */
-  partnership: "https://t.me/vip_massage_ad",
+  /** 광고 문의 텔레그램 */
+  ad: "https://t.me/googleseolab",
 } as const;
 
 // 4대 권역
