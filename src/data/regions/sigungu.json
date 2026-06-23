@@ -1760,7 +1760,7 @@
     ],
     "contentFocus": "자갈치시장과 남포동 상권을 품은 부산의 원도심 관광·상업 지역입니다.",
     "indexPriority": 2,
-    "contentStatus": "draft"
+    "contentStatus": "ready"
   },
   {
     "regionName": "서구",
@@ -1827,7 +1827,7 @@
     ],
     "contentFocus": "태종대와 흰여울문화마을을 품은 부산의 섬으로 이루어진 해안 지역입니다.",
     "indexPriority": 2,
-    "contentStatus": "draft"
+    "contentStatus": "ready"
   },
   {
     "regionName": "북구",
@@ -1850,6 +1850,6 @@
     ],
     "contentFocus": "구포시장과 화명신도시를 끼고 낙동강변에 자리한 부산 북부 주거 지역입니다.",
     "indexPriority": 2,
-    "contentStatus": "draft"
+    "contentStatus": "ready"
   }
 ]
