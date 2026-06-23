@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Breadcrumbs from "../../components/Breadcrumbs.astro";
-import { sidos } from "../../lib/data";
+import { sidos, lifeAreasOfSido } from "../../lib/data";
 import { breadcrumbSchema } from "../../lib/seo";
 
 const path = "/life/";
@@ -30,18 +30,27 @@ const schema = [
       </div>
 
       {
-        sidos.map((s) => (
-          <div style="margin-bottom:28px">
-            <h2 style="font-size:1.25rem">
-              <a href={`/area/${s.regionSlug}/`}>{s.regionName}</a> 생활권
-            </h2>
-            <div class="chip-list">
-              {s.lifeAreas.map((l) => (
-                <a class="chip" href={`/area/${s.regionSlug}/`}>{l}</a>
-              ))}
+        sidos.map((s) => {
+          const las = lifeAreasOfSido(s.regionSlug);
+          return (
+            <div style="margin-bottom:28px">
+              <h2 style="font-size:1.25rem">
+                <a href={`/area/${s.regionSlug}/`}>{s.regionName}</a> 생활권
+              </h2>
+              <div class="chip-list">
+                {las.length
+                  ? las.map((l) => (
+                      <a class="chip" href={`/life/${l.sidoSlug}/${l.slug}/`}>
+                        {l.name}
+                      </a>
+                    ))
+                  : s.lifeAreas.map((l) => (
+                      <a class="chip" href={`/area/${s.regionSlug}/`}>{l}</a>
+                    ))}
+              </div>
             </div>
-          </div>
-        ))
+          );
+        })
       }
     </div>
   </section>
