@@ -61,6 +61,9 @@ export interface Dong {
 }
 
 export interface DongDetail {
+  /** 비서울(경기·인천·부산)은 dong.json이 없으므로 상세에 한글 동명/요약을 포함 */
+  name?: string;
+  blurb?: string;
   nearbyStations: string[];
   adjacentAreas: string[];
   landmarks: string[];
@@ -101,6 +104,17 @@ export const dongsOf = (guSlug: string): Dong[] => {
   const list = dongs[guSlug];
   if (list && list.length) {
     return [...list].sort((a, b) => a.name.localeCompare(b.name, "ko"));
+  }
+  // 폴백: dong-detail에 한글 동명이 있으면 그것으로 목록 구성 (경기·인천·부산)
+  const det = dongDetails[guSlug];
+  if (det) {
+    return Object.entries(det)
+      .map(([slug, d]) => ({
+        name: d.name ?? slug,
+        slug,
+        blurb: d.blurb ?? d.character ?? "",
+      }))
+      .sort((a, b) => a.name.localeCompare(b.name, "ko"));
   }
   return [];
 };
