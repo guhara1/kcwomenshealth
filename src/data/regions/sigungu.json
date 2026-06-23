@@ -1130,7 +1130,7 @@
     ],
     "contentFocus": "옥정·회천 택지개발로 성장하는 경기 동북부 신흥 주거 도시입니다.",
     "indexPriority": 2,
-    "contentStatus": "draft"
+    "contentStatus": "ready"
   },
   {
     "regionName": "포천시",
@@ -1196,7 +1196,7 @@
     ],
     "contentFocus": "남한강 두물머리와 전원주택이 어우러진 경기 동부 자연 친화 군 지역입니다.",
     "indexPriority": 2,
-    "contentStatus": "draft"
+    "contentStatus": "ready"
   },
   {
     "regionName": "가평군",
@@ -1264,7 +1264,7 @@
     ],
     "contentFocus": "미군기지와 소요산을 끼고 형성된 경기 최북단 소규모 생활 도시입니다.",
     "indexPriority": 2,
-    "contentStatus": "draft"
+    "contentStatus": "ready"
   },
   {
     "regionName": "부평구",
