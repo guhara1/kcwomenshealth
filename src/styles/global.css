@@ -1273,11 +1273,10 @@ body {
   color: var(--c-blue-600);
   background-size: 100% 2px;
 }
-/* 버튼/칩은 본문 안에서도 고유 스타일 유지(밑줄·취소선 효과 제거) */
+/* 버튼/칩은 본문 안에서도 고유 스타일 유지 (밑줄만 제거, 배경 그라데이션 보존) */
 .prose a.btn,
 .prose a.chip,
 .prose a.area-row {
-  background-image: none;
   text-decoration: none;
 }
 .prose ul {
