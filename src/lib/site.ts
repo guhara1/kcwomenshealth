@@ -16,7 +16,7 @@ export const SITE = {
   phoneHref: "tel:0508-202-4719",
 
   /** 배포 도메인 (실제 도메인으로 교체) */
-  url: "https://www.vip-massage.co.kr",
+  url: "https://kcwomenshealth.com",
 
   /** 대표 OG/썸네일 이미지 (선호 이미지 지정용) */
   ogImage: "/og-image.svg",
