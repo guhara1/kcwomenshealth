@@ -53,7 +53,7 @@ jobs:
         env:
           INDEXNOW_DOMAIN: kcwomenshealth.com
           INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
-          SITEMAP_URL: https://kcwomenshealth.com/sitemap-index.xml
+          SITEMAP_URL: https://kcwomenshealth.com/sitemap.xml
         run: |
           echo "🔍 IndexNow 제출 중... ($SITEMAP_URL)"
           python tools/indexnow.py \
@@ -66,7 +66,7 @@ jobs:
       - name: Google Indexing API Submission
         env:
           GOOGLE_CREDENTIALS_JSON: ${{ secrets.GOOGLE_INDEXING_CREDENTIALS }}
-          SITEMAP_URL: https://kcwomenshealth.com/sitemap-index.xml
+          SITEMAP_URL: https://kcwomenshealth.com/sitemap.xml
         run: |
           if [ -z "$GOOGLE_CREDENTIALS_JSON" ]; then
             echo "⏭️  Google Indexing API 자격증명이 설정되지 않았습니다."
