@@ -3,7 +3,7 @@ import sitemap from "@astrojs/sitemap";
 import sigungu from "./src/data/regions/sigungu.json" with { type: "json" };
 
 // 배포 도메인. 실제 도메인으로 교체하세요.
-export const SITE_URL = "https://www.vip-massage.co.kr";
+export const SITE_URL = "https://www.kcwomenshealth.com";
 
 // contentStatus 가 ready 가 아닌(noindex 처리되는) 지역 경로는 sitemap 에서 제외
 const noindexPaths = sigungu
