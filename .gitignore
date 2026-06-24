@@ -15,6 +15,18 @@ npm-debug.log*
 # environment
 .env
 .env.production
+.env.local
+
+# credentials & secrets
+credentials/
+!credentials/.gitkeep
+
+# indexing results
+indexnow-results.json
+google-indexing-results.json
+
+# logs
+logs/
 
 # macOS
 .DS_Store

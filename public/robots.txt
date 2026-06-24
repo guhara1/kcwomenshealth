@@ -1,5 +1,11 @@
 User-agent: *
 Allow: /
 Disallow: /privacy/
+Disallow: /terms/
 
+# Google Search
 Sitemap: https://www.vip-massage.co.kr/sitemap-index.xml
+
+# IndexNow (Bing/Naver instant indexing)
+# Key: 7a8d3c91-2f4e-4b7a-9d2e-1f3a5c8e7d2b
+# Upload key to: https://www.vip-massage.co.kr/indexnow-key.txt

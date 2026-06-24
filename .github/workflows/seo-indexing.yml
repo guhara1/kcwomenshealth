@@ -1,0 +1,115 @@
+name: SEO Indexing - IndexNow & Google Indexing API
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - 'src/pages/**'
+      - 'src/data/**'
+      - 'src/components/**'
+      - '.github/workflows/seo-indexing.yml'
+  schedule:
+    # 매일 자정 UTC (한국 시간 오전 9시)
+    - cron: '0 0 * * *'
+    # 매주 월요일 오전 9시 UTC (한국 시간 오후 6시)
+    - cron: '0 9 * * 1'
+  workflow_dispatch:
+
+jobs:
+  build-and-index:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run build
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install Python dependencies
+        run: pip install requests google-auth
+
+      - name: Create credentials directory
+        run: mkdir -p credentials
+
+      - name: IndexNow Submission (Bing & Naver)
+        env:
+          INDEXNOW_DOMAIN: www.vip-massage.co.kr
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+          SITEMAP_URL: https://www.vip-massage.co.kr/sitemap-index.xml
+        run: |
+          echo "🔍 IndexNow 제출 중... ($SITEMAP_URL)"
+          python tools/indexnow.py \
+            --domain $INDEXNOW_DOMAIN \
+            --key $INDEXNOW_KEY \
+            --sitemap $SITEMAP_URL
+          echo "✅ IndexNow 완료"
+        continue-on-error: true
+
+      - name: Google Indexing API Submission
+        env:
+          GOOGLE_CREDENTIALS_JSON: ${{ secrets.GOOGLE_INDEXING_CREDENTIALS }}
+          SITEMAP_URL: https://www.vip-massage.co.kr/sitemap-index.xml
+        run: |
+          if [ -z "$GOOGLE_CREDENTIALS_JSON" ]; then
+            echo "⏭️  Google Indexing API 자격증명이 설정되지 않았습니다."
+            echo "   GitHub Secrets에 GOOGLE_INDEXING_CREDENTIALS를 추가하세요."
+            exit 0
+          fi
+
+          echo "$GOOGLE_CREDENTIALS_JSON" | base64 -d > credentials/google-indexing-sa.json
+          echo "🔍 Google Indexing API 제출 중... ($SITEMAP_URL)"
+          python tools/google_indexing_api.py \
+            --credentials credentials/google-indexing-sa.json \
+            --sitemap $SITEMAP_URL
+          echo "✅ Google Indexing API 완료"
+        continue-on-error: true
+
+      - name: Upload indexing results
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: indexing-results
+          path: |
+            indexnow-results.json
+            google-indexing-results.json
+          retention-days: 30
+
+      - name: Cleanup credentials
+        if: always()
+        run: rm -f credentials/google-indexing-sa.json
+
+      - name: Create summary
+        if: always()
+        run: |
+          echo "## 🔍 SEO 인덱싱 완료" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### IndexNow (Bing & Naver)" >> $GITHUB_STEP_SUMMARY
+          if [ -f indexnow-results.json ]; then
+            cat indexnow-results.json | jq '.[] | select(.results) | .results[]' | wc -l | xargs echo "- 제출된 배치: " >> $GITHUB_STEP_SUMMARY
+          fi
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Google Indexing API" >> $GITHUB_STEP_SUMMARY
+          if [ -f google-indexing-results.json ]; then
+            GOOGLE_SUCCESS=$(cat google-indexing-results.json | jq '.success_count')
+            GOOGLE_FAILED=$(cat google-indexing-results.json | jq '.failed_count')
+            echo "- 성공: $GOOGLE_SUCCESS" >> $GITHUB_STEP_SUMMARY
+            echo "- 실패: $GOOGLE_FAILED" >> $GITHUB_STEP_SUMMARY
+          fi
