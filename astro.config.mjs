@@ -10,6 +10,27 @@ const noindexPaths = sigungu
   .filter((g) => g.contentStatus !== "ready")
   .map((g) => `/area/${g.parentSlug}/${g.regionSlug}/`);
 
+// URL 유형별 우선순위/갱신주기 (검색엔진 크롤링 힌트)
+function priorityFor(path) {
+  if (path === "/") return { priority: 1.0, changefreq: "daily" };
+  if (/^\/(area|station|life|program)\/?$/.test(path))
+    return { priority: 0.9, changefreq: "daily" };
+  if (/^\/area\/[^/]+\/?$/.test(path))
+    return { priority: 0.9, changefreq: "weekly" };
+  if (
+    /^\/area\/[^/]+\/[^/]+\/?$/.test(path) ||
+    /^\/life\/[^/]+\/[^/]+\/?$/.test(path) ||
+    /^\/program\/[^/]+\/?$/.test(path)
+  )
+    return { priority: 0.8, changefreq: "weekly" };
+  if (
+    /^\/area\/[^/]+\/[^/]+\/[^/]+\/?$/.test(path) ||
+    /^\/station\/[^/]+\/[^/]+\/?$/.test(path)
+  )
+    return { priority: 0.7, changefreq: "weekly" };
+  return { priority: 0.6, changefreq: "monthly" };
+}
+
 export default defineConfig({
   site: SITE_URL,
   trailingSlash: "ignore",
@@ -24,6 +45,14 @@ export default defineConfig({
         if (page.includes("/terms")) return false;
         const path = new URL(page).pathname;
         return !noindexPaths.includes(path);
+      },
+      lastmod: new Date(),
+      serialize(item) {
+        const path = new URL(item.url).pathname;
+        const { priority, changefreq } = priorityFor(path);
+        item.priority = priority;
+        item.changefreq = changefreq;
+        return item;
       },
     }),
   ],
